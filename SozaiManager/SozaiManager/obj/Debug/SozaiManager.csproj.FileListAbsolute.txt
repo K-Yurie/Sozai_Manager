@@ -1,0 +1,9 @@
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Debug\SozaiManager.exe.config
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Debug\SozaiManager.exe
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Debug\SozaiManager.pdb
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.csprojAssemblyReference.cache
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.Form1.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.Properties.Resources.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.csproj.GenerateResource.cache
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.exe
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.pdb
