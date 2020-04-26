@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Linq;
 using System.Xml.Linq;
+using System.IO;
+using System.Security.AccessControl;
 
 
 namespace SozaiManager
@@ -63,6 +65,8 @@ namespace SozaiManager
                 cmbJanru.Text = "";
                 cmbTeikyo.Text = "";
                 txFileName.Text = "";
+                checkBox1.Checked = false;
+                txNikname.Text = "";
             };
 
             btnAdd.Click += (_sender, _e) =>
@@ -80,6 +84,9 @@ namespace SozaiManager
                     MessageBox.Show("必須項目を入力をしてください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
+
+
+
         }
 
 
@@ -113,19 +120,42 @@ namespace SozaiManager
                     break;
             }
 
-            XElement datasXml = XElement.Load(@"sozaidata.xml");
+
+            string nowPass = Directory.GetCurrentDirectory();
+
+            XElement datasXml = XElement.Load(nowPass+"\\sozaidata.xml");
             if (JanruText == "画像")
             {
                 switch (flg)
                 {
-
-                    //シリアライズが必要
                     case 0:
-                        XElement datas0 = new XElement(nodetype,
-                        new XElement("supply", cmbTeikyo.Text),
-                        new XElement("name", txFileName.Text));
-                        datasXml.Add(datas0);
-                        datasXml.Save(@"sozaidata.xml");
+
+                        XmlNodeList List;
+                        _dataXml.Load(nowPass + "\\sozaidata.xml");
+                        List = _dataXml.SelectNodes(nodetype);
+
+                        //XElement addNodes = new XElement("sozai");
+                        //addNodes.SetElementValue("supply", cmbTeikyo.Text);
+                        //addNodes.SetElementValue("name", txFileName.Text);
+
+                        //XmlText xmlDocu = new XmlText("onesozai",_dataXml);
+                        //xmlDocu.CreateElement("onesozai");
+                            //, new XElement("supply", cmbTeikyo.Text)
+                            //, new XElement("name", txFileName.Text));
+
+
+                        //XElement datas0 = new XElement("this",
+                        //new XElement("supply", cmbTeikyo.Text),
+                        //new XElement("name", txFileName.Text));
+                        //datasXml.Add(datas0);
+                        //datasXml.SetElementValue.Save(nowPass + "\\test.xml");
+
+                        //List = _dataXml.GetElementsByTagName(nodetype);
+                        //List[0].AppendChild(xmlDocu);
+
+
+
+
                         break;
 
                     case 1:
@@ -161,5 +191,26 @@ namespace SozaiManager
         }
 
 
+
+        #region ToolStripMenu
+        private void データ整理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataedit jump = new dataedit();
+            jump.ShowDialog();
+        }
+
+        #endregion
+
+        private void データの抽出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAndCopy jump = new ShowAndCopy();
+            jump.ShowDialog();
+        }
+
+        private void 提供元の追加ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editsupply jump = new editsupply();
+            jump.ShowDialog();
+        }
     }
 }

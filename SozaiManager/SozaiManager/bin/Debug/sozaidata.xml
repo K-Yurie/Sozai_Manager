@@ -1,8 +1,97 @@
-<sozaidata>
-<picture></picture>
-<BGM></BGM>
-<SE></SE>
-<Movie></Movie>
-<Script></Script>
-<Application></Application>
-</sozaidata>
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SozaiManager</name>
+    </assembly>
+    <members>
+        <member name="F:SozaiManager.dataedit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SozaiManager.dataedit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SozaiManager.dataedit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SozaiManager.editsupply.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SozaiManager.editsupply.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SozaiManager.editsupply.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SozaiManager.Form1.components">
+            <summary>
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:SozaiManager.Form1.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        </member>
+        <member name="M:SozaiManager.Form1.InitializeComponent">
+            <summary>
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:SozaiManager.Program.Main">
+            <summary>
+            アプリケーションのメイン エントリ ポイントです。
+            </summary>
+        </member>
+        <member name="F:SozaiManager.ShowAndCopy.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SozaiManager.ShowAndCopy.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SozaiManager.ShowAndCopy.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SozaiManager.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:SozaiManager.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスで使用されるキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:SozaiManager.Properties.Resources.Culture">
+            <summary>
+              すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+    </members>
+</doc>

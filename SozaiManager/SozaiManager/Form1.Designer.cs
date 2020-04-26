@@ -146,18 +146,21 @@
             this.データの抽出ToolStripMenuItem.Name = "データの抽出ToolStripMenuItem";
             this.データの抽出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.データの抽出ToolStripMenuItem.Text = "データの抽出";
+            this.データの抽出ToolStripMenuItem.Click += new System.EventHandler(this.データの抽出ToolStripMenuItem_Click);
             // 
             // 提供元の追加ToolStripMenuItem
             // 
             this.提供元の追加ToolStripMenuItem.Name = "提供元の追加ToolStripMenuItem";
             this.提供元の追加ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.提供元の追加ToolStripMenuItem.Text = "提供元の追加";
+            this.提供元の追加ToolStripMenuItem.Text = "提供元編集";
+            this.提供元の追加ToolStripMenuItem.Click += new System.EventHandler(this.提供元の追加ToolStripMenuItem_Click);
             // 
             // データ整理ToolStripMenuItem
             // 
             this.データ整理ToolStripMenuItem.Name = "データ整理ToolStripMenuItem";
             this.データ整理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.データ整理ToolStripMenuItem.Text = "素材データ整理";
+            this.データ整理ToolStripMenuItem.Text = "素材データ編集";
+            this.データ整理ToolStripMenuItem.Click += new System.EventHandler(this.データ整理ToolStripMenuItem_Click);
             // 
             // checkBox1
             // 
