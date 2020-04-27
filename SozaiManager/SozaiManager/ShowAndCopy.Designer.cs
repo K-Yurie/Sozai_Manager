@@ -28,356 +28,394 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowAndCopy));
+            this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.txDisplay = new System.Windows.Forms.TextBox();
+            this.rdoNewrowHoot = new System.Windows.Forms.RadioButton();
+            this.rdoSrashHoot = new System.Windows.Forms.RadioButton();
+            this.rdoBrankHoot = new System.Windows.Forms.RadioButton();
+            this.gbWriteHoot = new System.Windows.Forms.GroupBox();
+            this.rdoHootLess = new System.Windows.Forms.RadioButton();
+            this.tbOriginalHoot = new System.Windows.Forms.TextBox();
+            this.rdoOriginalHoot = new System.Windows.Forms.RadioButton();
+            this.btnExportText = new System.Windows.Forms.Button();
+            this.gbWriteHead = new System.Windows.Forms.GroupBox();
+            this.rdoHeadLess = new System.Windows.Forms.RadioButton();
+            this.tbOriginalHead = new System.Windows.Forms.TextBox();
+            this.rdoOriginalHead = new System.Windows.Forms.RadioButton();
+            this.rdoBrankHead = new System.Windows.Forms.RadioButton();
+            this.rdoDotHead = new System.Windows.Forms.RadioButton();
+            this.rdoAstaHead = new System.Windows.Forms.RadioButton();
+            this.chkAllDisp = new System.Windows.Forms.CheckBox();
+            this.chkPictureDisp = new System.Windows.Forms.CheckBox();
+            this.chkBgmDisp = new System.Windows.Forms.CheckBox();
+            this.chkSeDisp = new System.Windows.Forms.CheckBox();
+            this.chkScriptDisp = new System.Windows.Forms.CheckBox();
+            this.chkMovieDisp = new System.Windows.Forms.CheckBox();
+            this.chkApplicationDisp = new System.Windows.Forms.CheckBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.gbSoat = new System.Windows.Forms.GroupBox();
+            this.chkNeedOnlyDisp = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSoat = new System.Windows.Forms.Button();
+            this.btnCSV = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            this.gbWriteHoot.SuspendLayout();
+            this.gbWriteHead.SuspendLayout();
+            this.gbSoat.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 23);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(687, 267);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(17, 23);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.RowTemplate.Height = 21;
+            this.dataGrid.Size = new System.Drawing.Size(687, 267);
+            this.dataGrid.TabIndex = 0;
             // 
-            // textBox1
+            // txDisplay
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 298);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox1.Size = new System.Drawing.Size(687, 146);
-            this.textBox1.TabIndex = 1;
+            this.txDisplay.Location = new System.Drawing.Point(17, 298);
+            this.txDisplay.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.txDisplay.Multiline = true;
+            this.txDisplay.Name = "txDisplay";
+            this.txDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txDisplay.Size = new System.Drawing.Size(687, 146);
+            this.txDisplay.TabIndex = 1;
             // 
-            // radioButton1
+            // rdoNewrowHoot
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 24);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 21);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "改行";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoNewrowHoot.AutoSize = true;
+            this.rdoNewrowHoot.Location = new System.Drawing.Point(11, 23);
+            this.rdoNewrowHoot.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.rdoNewrowHoot.Name = "rdoNewrowHoot";
+            this.rdoNewrowHoot.Size = new System.Drawing.Size(56, 21);
+            this.rdoNewrowHoot.TabIndex = 2;
+            this.rdoNewrowHoot.TabStop = true;
+            this.rdoNewrowHoot.Text = "改行";
+            this.rdoNewrowHoot.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoSrashHoot
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(88, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(125, 21);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "/(スラッシュ)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoSrashHoot.AutoSize = true;
+            this.rdoSrashHoot.Location = new System.Drawing.Point(78, 24);
+            this.rdoSrashHoot.Name = "rdoSrashHoot";
+            this.rdoSrashHoot.Size = new System.Drawing.Size(125, 21);
+            this.rdoSrashHoot.TabIndex = 3;
+            this.rdoSrashHoot.TabStop = true;
+            this.rdoSrashHoot.Text = "/(スラッシュ)";
+            this.rdoSrashHoot.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdoBrankHoot
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(219, 24);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(56, 21);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "空白";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoBrankHoot.AutoSize = true;
+            this.rdoBrankHoot.Location = new System.Drawing.Point(209, 24);
+            this.rdoBrankHoot.Name = "rdoBrankHoot";
+            this.rdoBrankHoot.Size = new System.Drawing.Size(56, 21);
+            this.rdoBrankHoot.TabIndex = 4;
+            this.rdoBrankHoot.TabStop = true;
+            this.rdoBrankHoot.Text = "空白";
+            this.rdoBrankHoot.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbWriteHoot
             // 
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(17, 606);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 58);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "接尾辞";
+            this.gbWriteHoot.Controls.Add(this.rdoHootLess);
+            this.gbWriteHoot.Controls.Add(this.tbOriginalHoot);
+            this.gbWriteHoot.Controls.Add(this.rdoOriginalHoot);
+            this.gbWriteHoot.Controls.Add(this.rdoBrankHoot);
+            this.gbWriteHoot.Controls.Add(this.rdoNewrowHoot);
+            this.gbWriteHoot.Controls.Add(this.rdoSrashHoot);
+            this.gbWriteHoot.Location = new System.Drawing.Point(15, 621);
+            this.gbWriteHoot.Name = "gbWriteHoot";
+            this.gbWriteHoot.Size = new System.Drawing.Size(558, 58);
+            this.gbWriteHoot.TabIndex = 5;
+            this.gbWriteHoot.TabStop = false;
+            this.gbWriteHoot.Text = "接尾辞";
             // 
-            // radioButton4
+            // rdoHootLess
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(281, 24);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(56, 21);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "指定";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdoHootLess.AutoSize = true;
+            this.rdoHootLess.Location = new System.Drawing.Point(496, 25);
+            this.rdoHootLess.Name = "rdoHootLess";
+            this.rdoHootLess.Size = new System.Drawing.Size(56, 21);
+            this.rdoHootLess.TabIndex = 7;
+            this.rdoHootLess.TabStop = true;
+            this.rdoHootLess.Text = "なし";
+            this.rdoHootLess.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbOriginalHoot
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(343, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 25);
-            this.textBox2.TabIndex = 6;
+            this.tbOriginalHoot.Enabled = false;
+            this.tbOriginalHoot.Location = new System.Drawing.Point(331, 24);
+            this.tbOriginalHoot.Name = "tbOriginalHoot";
+            this.tbOriginalHoot.Size = new System.Drawing.Size(147, 25);
+            this.tbOriginalHoot.TabIndex = 6;
             // 
-            // radioButton5
+            // rdoOriginalHoot
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(505, 24);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(56, 21);
-            this.radioButton5.TabIndex = 7;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "なし";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdoOriginalHoot.AutoSize = true;
+            this.rdoOriginalHoot.Location = new System.Drawing.Point(269, 24);
+            this.rdoOriginalHoot.Name = "rdoOriginalHoot";
+            this.rdoOriginalHoot.Size = new System.Drawing.Size(56, 21);
+            this.rdoOriginalHoot.TabIndex = 5;
+            this.rdoOriginalHoot.TabStop = true;
+            this.rdoOriginalHoot.Text = "指定";
+            this.rdoOriginalHoot.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnExportText
             // 
-            this.button1.Location = new System.Drawing.Point(619, 606);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 58);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "テキスト\r\n抽出";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExportText.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnExportText.Location = new System.Drawing.Point(652, 555);
+            this.btnExportText.Name = "btnExportText";
+            this.btnExportText.Size = new System.Drawing.Size(67, 124);
+            this.btnExportText.TabIndex = 6;
+            this.btnExportText.Text = "テキスト\r\n抽出";
+            this.btnExportText.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gbWriteHead
             // 
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Controls.Add(this.radioButton9);
-            this.groupBox2.Controls.Add(this.radioButton10);
-            this.groupBox2.Location = new System.Drawing.Point(17, 542);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(571, 58);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "接頭辞";
+            this.gbWriteHead.Controls.Add(this.rdoHeadLess);
+            this.gbWriteHead.Controls.Add(this.tbOriginalHead);
+            this.gbWriteHead.Controls.Add(this.rdoOriginalHead);
+            this.gbWriteHead.Controls.Add(this.rdoBrankHead);
+            this.gbWriteHead.Controls.Add(this.rdoDotHead);
+            this.gbWriteHead.Controls.Add(this.rdoAstaHead);
+            this.gbWriteHead.Location = new System.Drawing.Point(17, 555);
+            this.gbWriteHead.Name = "gbWriteHead";
+            this.gbWriteHead.Size = new System.Drawing.Size(556, 58);
+            this.gbWriteHead.TabIndex = 7;
+            this.gbWriteHead.TabStop = false;
+            this.gbWriteHead.Text = "接頭辞";
             // 
-            // radioButton6
+            // rdoHeadLess
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(505, 24);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(56, 21);
-            this.radioButton6.TabIndex = 7;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "なし";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdoHeadLess.AutoSize = true;
+            this.rdoHeadLess.Location = new System.Drawing.Point(494, 21);
+            this.rdoHeadLess.Name = "rdoHeadLess";
+            this.rdoHeadLess.Size = new System.Drawing.Size(56, 21);
+            this.rdoHeadLess.TabIndex = 7;
+            this.rdoHeadLess.TabStop = true;
+            this.rdoHeadLess.Text = "なし";
+            this.rdoHeadLess.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // tbOriginalHead
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(343, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 25);
-            this.textBox3.TabIndex = 6;
+            this.tbOriginalHead.Enabled = false;
+            this.tbOriginalHead.Location = new System.Drawing.Point(329, 17);
+            this.tbOriginalHead.Name = "tbOriginalHead";
+            this.tbOriginalHead.Size = new System.Drawing.Size(147, 25);
+            this.tbOriginalHead.TabIndex = 6;
             // 
-            // radioButton7
+            // rdoOriginalHead
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(281, 24);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(56, 21);
-            this.radioButton7.TabIndex = 5;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "指定";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdoOriginalHead.AutoSize = true;
+            this.rdoOriginalHead.Location = new System.Drawing.Point(269, 23);
+            this.rdoOriginalHead.Name = "rdoOriginalHead";
+            this.rdoOriginalHead.Size = new System.Drawing.Size(56, 21);
+            this.rdoOriginalHead.TabIndex = 5;
+            this.rdoOriginalHead.TabStop = true;
+            this.rdoOriginalHead.Text = "指定";
+            this.rdoOriginalHead.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rdoBrankHead
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(219, 24);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(56, 21);
-            this.radioButton8.TabIndex = 4;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "空白";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rdoBrankHead.AutoSize = true;
+            this.rdoBrankHead.Location = new System.Drawing.Point(207, 23);
+            this.rdoBrankHead.Name = "rdoBrankHead";
+            this.rdoBrankHead.Size = new System.Drawing.Size(56, 21);
+            this.rdoBrankHead.TabIndex = 4;
+            this.rdoBrankHead.TabStop = true;
+            this.rdoBrankHead.Text = "空白";
+            this.rdoBrankHead.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rdoDotHead
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(21, 24);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(86, 21);
-            this.radioButton9.TabIndex = 2;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "・（点）";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rdoDotHead.AutoSize = true;
+            this.rdoDotHead.Location = new System.Drawing.Point(9, 23);
+            this.rdoDotHead.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.rdoDotHead.Name = "rdoDotHead";
+            this.rdoDotHead.Size = new System.Drawing.Size(86, 21);
+            this.rdoDotHead.TabIndex = 2;
+            this.rdoDotHead.TabStop = true;
+            this.rdoDotHead.Text = "・（点）";
+            this.rdoDotHead.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rdoAstaHead
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(108, 24);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(105, 21);
-            this.radioButton10.TabIndex = 3;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "＊(ｱｽﾀﾘｽｸ)";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rdoAstaHead.AutoSize = true;
+            this.rdoAstaHead.Location = new System.Drawing.Point(96, 23);
+            this.rdoAstaHead.Name = "rdoAstaHead";
+            this.rdoAstaHead.Size = new System.Drawing.Size(105, 21);
+            this.rdoAstaHead.TabIndex = 3;
+            this.rdoAstaHead.TabStop = true;
+            this.rdoAstaHead.Text = "＊(ｱｽﾀﾘｽｸ)";
+            this.rdoAstaHead.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkAllDisp
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(21, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 21);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "すべて";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkAllDisp.AutoSize = true;
+            this.chkAllDisp.Location = new System.Drawing.Point(21, 19);
+            this.chkAllDisp.Name = "chkAllDisp";
+            this.chkAllDisp.Size = new System.Drawing.Size(72, 21);
+            this.chkAllDisp.TabIndex = 8;
+            this.chkAllDisp.Text = "すべて";
+            this.chkAllDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkPictureDisp
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(124, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 21);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "画像";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkPictureDisp.AutoSize = true;
+            this.chkPictureDisp.Location = new System.Drawing.Point(124, 19);
+            this.chkPictureDisp.Name = "chkPictureDisp";
+            this.chkPictureDisp.Size = new System.Drawing.Size(57, 21);
+            this.chkPictureDisp.TabIndex = 9;
+            this.chkPictureDisp.Text = "画像";
+            this.chkPictureDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkBgmDisp
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(201, 19);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(51, 21);
-            this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "BGM";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkBgmDisp.AutoSize = true;
+            this.chkBgmDisp.Location = new System.Drawing.Point(201, 19);
+            this.chkBgmDisp.Name = "chkBgmDisp";
+            this.chkBgmDisp.Size = new System.Drawing.Size(51, 21);
+            this.chkBgmDisp.TabIndex = 10;
+            this.chkBgmDisp.Text = "BGM";
+            this.chkBgmDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkSeDisp
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(272, 19);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(43, 21);
-            this.checkBox4.TabIndex = 11;
-            this.checkBox4.Text = "SE";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkSeDisp.AutoSize = true;
+            this.chkSeDisp.Location = new System.Drawing.Point(272, 19);
+            this.chkSeDisp.Name = "chkSeDisp";
+            this.chkSeDisp.Size = new System.Drawing.Size(43, 21);
+            this.chkSeDisp.TabIndex = 11;
+            this.chkSeDisp.Text = "SE";
+            this.chkSeDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkScriptDisp
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(413, 19);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(102, 21);
-            this.checkBox5.TabIndex = 12;
-            this.checkBox5.Text = "スクリプト";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkScriptDisp.AutoSize = true;
+            this.chkScriptDisp.Location = new System.Drawing.Point(413, 19);
+            this.chkScriptDisp.Name = "chkScriptDisp";
+            this.chkScriptDisp.Size = new System.Drawing.Size(102, 21);
+            this.chkScriptDisp.TabIndex = 12;
+            this.chkScriptDisp.Text = "スクリプト";
+            this.chkScriptDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkMovieDisp
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(333, 19);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(57, 21);
-            this.checkBox6.TabIndex = 13;
-            this.checkBox6.Text = "動画";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkMovieDisp.AutoSize = true;
+            this.chkMovieDisp.Location = new System.Drawing.Point(333, 19);
+            this.chkMovieDisp.Name = "chkMovieDisp";
+            this.chkMovieDisp.Size = new System.Drawing.Size(57, 21);
+            this.chkMovieDisp.TabIndex = 13;
+            this.chkMovieDisp.Text = "動画";
+            this.chkMovieDisp.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chkApplicationDisp
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(521, 19);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(147, 21);
-            this.checkBox7.TabIndex = 14;
-            this.checkBox7.Text = "アプリケーション";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkApplicationDisp.AutoSize = true;
+            this.chkApplicationDisp.Location = new System.Drawing.Point(521, 19);
+            this.chkApplicationDisp.Name = "chkApplicationDisp";
+            this.chkApplicationDisp.Size = new System.Drawing.Size(147, 21);
+            this.chkApplicationDisp.TabIndex = 14;
+            this.chkApplicationDisp.Text = "アプリケーション";
+            this.chkApplicationDisp.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Location = new System.Drawing.Point(619, 555);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 43);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "クリア";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnClear.Location = new System.Drawing.Point(579, 622);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(67, 57);
+            this.btnClear.TabIndex = 15;
+            this.btnClear.Text = "画面クリア";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // gbSoat
             // 
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox7);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Location = new System.Drawing.Point(17, 451);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(692, 46);
-            this.groupBox3.TabIndex = 16;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "素材タイプ";
+            this.gbSoat.Controls.Add(this.chkAllDisp);
+            this.gbSoat.Controls.Add(this.chkPictureDisp);
+            this.gbSoat.Controls.Add(this.chkApplicationDisp);
+            this.gbSoat.Controls.Add(this.chkBgmDisp);
+            this.gbSoat.Controls.Add(this.chkMovieDisp);
+            this.gbSoat.Controls.Add(this.chkSeDisp);
+            this.gbSoat.Controls.Add(this.chkScriptDisp);
+            this.gbSoat.Location = new System.Drawing.Point(12, 451);
+            this.gbSoat.Name = "gbSoat";
+            this.gbSoat.Size = new System.Drawing.Size(707, 46);
+            this.gbSoat.TabIndex = 16;
+            this.gbSoat.TabStop = false;
+            this.gbSoat.Text = "素材タイプ";
             // 
-            // checkBox8
+            // chkNeedOnlyDisp
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(25, 511);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(117, 21);
-            this.checkBox8.TabIndex = 17;
-            this.checkBox8.Text = "表示必須のみ";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkNeedOnlyDisp.AutoSize = true;
+            this.chkNeedOnlyDisp.Checked = true;
+            this.chkNeedOnlyDisp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNeedOnlyDisp.Location = new System.Drawing.Point(529, 513);
+            this.chkNeedOnlyDisp.Name = "chkNeedOnlyDisp";
+            this.chkNeedOnlyDisp.Size = new System.Drawing.Size(87, 21);
+            this.chkNeedOnlyDisp.TabIndex = 17;
+            this.chkNeedOnlyDisp.Text = "必須のみ";
+            this.chkNeedOnlyDisp.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Location = new System.Drawing.Point(13, 546);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(706, 3);
+            this.panel1.TabIndex = 18;
+            // 
+            // btnSoat
+            // 
+            this.btnSoat.Location = new System.Drawing.Point(622, 504);
+            this.btnSoat.Name = "btnSoat";
+            this.btnSoat.Size = new System.Drawing.Size(97, 36);
+            this.btnSoat.TabIndex = 19;
+            this.btnSoat.Text = "絞り込み";
+            this.btnSoat.UseVisualStyleBackColor = true;
+            // 
+            // btnCSV
+            // 
+            this.btnCSV.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnCSV.Location = new System.Drawing.Point(579, 555);
+            this.btnCSV.Name = "btnCSV";
+            this.btnCSV.Size = new System.Drawing.Size(67, 58);
+            this.btnCSV.TabIndex = 20;
+            this.btnCSV.Text = "CSV出力";
+            this.btnCSV.UseVisualStyleBackColor = true;
             // 
             // ShowAndCopy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 676);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(721, 685);
+            this.Controls.Add(this.btnCSV);
+            this.Controls.Add(this.btnSoat);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chkNeedOnlyDisp);
+            this.Controls.Add(this.gbSoat);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.gbWriteHead);
+            this.Controls.Add(this.btnExportText);
+            this.Controls.Add(this.gbWriteHoot);
+            this.Controls.Add(this.txDisplay);
+            this.Controls.Add(this.dataGrid);
             this.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.Name = "ShowAndCopy";
             this.Text = "データ抽出";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Load += new System.EventHandler(this.ShowAndCopy_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            this.gbWriteHoot.ResumeLayout(false);
+            this.gbWriteHoot.PerformLayout();
+            this.gbWriteHead.ResumeLayout(false);
+            this.gbWriteHead.PerformLayout();
+            this.gbSoat.ResumeLayout(false);
+            this.gbSoat.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,32 +423,35 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.DataGridView dataGrid;
+        private System.Windows.Forms.TextBox txDisplay;
+        private System.Windows.Forms.RadioButton rdoNewrowHoot;
+        private System.Windows.Forms.RadioButton rdoSrashHoot;
+        private System.Windows.Forms.RadioButton rdoBrankHoot;
+        private System.Windows.Forms.GroupBox gbWriteHoot;
+        private System.Windows.Forms.RadioButton rdoHootLess;
+        private System.Windows.Forms.TextBox tbOriginalHoot;
+        private System.Windows.Forms.RadioButton rdoOriginalHoot;
+        private System.Windows.Forms.Button btnExportText;
+        private System.Windows.Forms.GroupBox gbWriteHead;
+        private System.Windows.Forms.RadioButton rdoHeadLess;
+        private System.Windows.Forms.TextBox tbOriginalHead;
+        private System.Windows.Forms.RadioButton rdoOriginalHead;
+        private System.Windows.Forms.RadioButton rdoBrankHead;
+        private System.Windows.Forms.RadioButton rdoDotHead;
+        private System.Windows.Forms.RadioButton rdoAstaHead;
+        private System.Windows.Forms.CheckBox chkAllDisp;
+        private System.Windows.Forms.CheckBox chkPictureDisp;
+        private System.Windows.Forms.CheckBox chkBgmDisp;
+        private System.Windows.Forms.CheckBox chkSeDisp;
+        private System.Windows.Forms.CheckBox chkScriptDisp;
+        private System.Windows.Forms.CheckBox chkMovieDisp;
+        private System.Windows.Forms.CheckBox chkApplicationDisp;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.GroupBox gbSoat;
+        private System.Windows.Forms.CheckBox chkNeedOnlyDisp;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSoat;
+        private System.Windows.Forms.Button btnCSV;
     }
 }

@@ -7,7 +7,6 @@ C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\D
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.csproj.GenerateResource.cache
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.exe
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.pdb
-C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Debug\sozaidata.xml
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.ShowAndCopy.resources
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.dataedit.resources
 C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Debug\SozaiManager.editsupply.resources
