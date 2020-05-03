@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
+using System.Media;
 
 
 
@@ -18,7 +19,8 @@ namespace SozaiManager
     {
         XDocument _supplyDocu = XDocument.Load("source.xml");
         XDocument _dataDocu = XDocument.Load("sozaidata.xml");
-
+        private System.Media.SoundPlayer player = null;
+        string tinSound = "Sound.wav";
         //XmlDocument _supplyXml = new XmlDocument();
         //XmlDocument _dataXml = new XmlDocument();
 
@@ -50,11 +52,11 @@ namespace SozaiManager
             XElement source = _supplyDocu.Element("source");
             IEnumerable<XElement> supplyes = source.Elements("supply");
 
-            foreach(XElement supply in supplyes) 
+            foreach (XElement supply in supplyes)
             {
                 cmbTeikyo.Items.Add(supply.Value);
             }
-            
+
             cmbJanru.Items.Add("");
             cmbJanru.Items.Add("画像");
             cmbJanru.Items.Add("BGM");
@@ -67,7 +69,7 @@ namespace SozaiManager
         }
 
 
-        private void set_Lamda() 
+        private void set_Lamda()
         {
             btnClear.Click += (_sender, _e) =>
             {
@@ -90,8 +92,9 @@ namespace SozaiManager
 
                     txFileName.Text = "";
                     txNikname.Text = "";
+                    PlaySound();
                 }
-                else 
+                else
                 {
                     MessageBox.Show("必須項目を入力をしてください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -102,10 +105,10 @@ namespace SozaiManager
         }
 
 
-        private void WriteDataXml(string JanruText,int flg) 
+        private void WriteDataXml(string JanruText, int flg)
         {
             string nodetype = "";
-            switch (JanruText) 
+            switch (JanruText)
             {
                 case "画像":
                     nodetype = "picture";
@@ -134,62 +137,71 @@ namespace SozaiManager
 
             XElement sozaidatas = _dataDocu.Element("sozaidatas");
 
-                switch (flg)
-                {
-                    case 0:
-                        
-                        XElement inputTo0 = sozaidatas.Element(nodetype);
-                        XElement inputDatas0 = new XElement("data",
-                            new XElement("supply",cmbTeikyo.Text),
-                            new XElement("name",txFileName.Text),
-                            new XElement("needDisplay", "false"),
-                            new XElement("nikname", "-"));
+            switch (flg)
+            {
+                case 0:
 
-                        inputTo0.Add(inputDatas0);
-                        _dataDocu.Save("sozaidata.xml");
+                    XElement inputTo0 = sozaidatas.Element(nodetype);
+                    XElement inputDatas0 = new XElement("data",
+                        new XElement("supply", cmbTeikyo.Text),
+                        new XElement("name", txFileName.Text),
+                        new XElement("needDisplay", "false"),
+                        new XElement("nikname", "-"));
 
-                        break;
+                    inputTo0.Add(inputDatas0);
+                    _dataDocu.Save("sozaidata.xml");
 
-                    case 1:
-                        XElement inputTo1= sozaidatas.Element(nodetype);
-                        XElement inputDatas1 = new XElement("data",
-                            new XElement("supply", cmbTeikyo.Text),
-                            new XElement("name", txFileName.Text),
-                            new XElement("needDisplay","true"),
-                            new XElement("nikname", "-"));
+                    break;
 
-                        inputTo1.Add(inputDatas1);
-                        _dataDocu.Save("sozaidata.xml");
+                case 1:
+                    XElement inputTo1 = sozaidatas.Element(nodetype);
+                    XElement inputDatas1 = new XElement("data",
+                        new XElement("supply", cmbTeikyo.Text),
+                        new XElement("name", txFileName.Text),
+                        new XElement("needDisplay", "true"),
+                        new XElement("nikname", "-"));
 
-                        break;
+                    inputTo1.Add(inputDatas1);
+                    _dataDocu.Save("sozaidata.xml");
 
-                    case 2:
-                        XElement inputTo2 = sozaidatas.Element(nodetype);
-                        XElement inputDatas2 = new XElement("data",
-                            new XElement("supply", cmbTeikyo.Text),
-                            new XElement("name", txFileName.Text),
-                            new XElement("needDisplay", "false"),
-                            new XElement("nikname", txNikname.Text));
+                    break;
 
-                        inputTo2.Add(inputDatas2);
-                        _dataDocu.Save("sozaidata.xml");
-                        break;
+                case 2:
+                    XElement inputTo2 = sozaidatas.Element(nodetype);
+                    XElement inputDatas2 = new XElement("data",
+                        new XElement("supply", cmbTeikyo.Text),
+                        new XElement("name", txFileName.Text),
+                        new XElement("needDisplay", "false"),
+                        new XElement("nikname", txNikname.Text));
 
-                    case 3:
-                        XElement inputTo3 = sozaidatas.Element(nodetype);
-                        XElement inputDatas3 = new XElement("data",
-                            new XElement("supply", cmbTeikyo.Text),
-                            new XElement("name", txFileName.Text),
-                            new XElement("needDisplay", "true"),
-                            new XElement("nikname", txNikname.Text));
+                    inputTo2.Add(inputDatas2);
+                    _dataDocu.Save("sozaidata.xml");
+                    break;
 
-                        inputTo3.Add(inputDatas3);
-                        _dataDocu.Save("sozaidata.xml");
-                        break;
-                }
-            
+                case 3:
+                    XElement inputTo3 = sozaidatas.Element(nodetype);
+                    XElement inputDatas3 = new XElement("data",
+                        new XElement("supply", cmbTeikyo.Text),
+                        new XElement("name", txFileName.Text),
+                        new XElement("needDisplay", "true"),
+                        new XElement("nikname", txNikname.Text));
+
+                    inputTo3.Add(inputDatas3);
+                    _dataDocu.Save("sozaidata.xml");
+                    break;
+            }
+
 
         }
+
+
+        private void PlaySound() 
+        {
+            player = new System.Media.SoundPlayer(tinSound);
+            player.Play();
+        }
+
+
 
         #region ToolStripMenu
         private void データ整理ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -210,6 +222,54 @@ namespace SozaiManager
         {
             editsupply jump = new editsupply();
             jump.ShowDialog();
+
+            cmbTeikyo.Items.Clear();
+            _supplyDocu = XDocument.Load("source.xml");
+            XElement source = _supplyDocu.Element("source");
+            IEnumerable<XElement> supplyes = source.Elements("supply");
+            foreach (XElement supply in supplyes)
+            {
+                cmbTeikyo.Items.Add(supply.Value);
+            }
+
+        }
+
+        private void 素材データの全消去ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult goreject = MessageBox.Show("素材データを完全削除します。よろしいですか？", "データの完全削除", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (goreject == DialogResult.OK) 
+            {
+                XElement fomatedXml = new XElement("sozaidatas",
+                    new XElement("picture"),
+                    new XElement("BGM"),
+                    new XElement("SE"),
+                    new XElement("Movie"),
+                    new XElement("Script"),
+                    new XElement("Application"));
+
+                XDocument fomatedDocu = new XDocument();
+                fomatedDocu.Add(fomatedXml);
+                fomatedDocu.Save("sozaidata.xml");
+                _dataDocu = XDocument.Load("sozaidata.xml");
+
+                XElement source = _supplyDocu.Element("source");
+                IEnumerable<XElement> supplyes = source.Elements("supply");
+
+                foreach (XElement supply in supplyes)
+                {
+                    cmbTeikyo.Items.Add(supply.Value);
+                }
+
+                cmbJanru.Items.Add("");
+                cmbJanru.Items.Add("画像");
+                cmbJanru.Items.Add("BGM");
+                cmbJanru.Items.Add("SE");
+                cmbJanru.Items.Add("動画");
+                cmbJanru.Items.Add("スクリプト");
+                cmbJanru.Items.Add("アプリケーション");
+
+            }
         }
     }
 }

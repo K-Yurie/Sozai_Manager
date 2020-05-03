@@ -30,96 +30,159 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dataedit));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supply = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nikname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Display = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbType1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbSupply1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbname1 = new System.Windows.Forms.TextBox();
+            this.tbnikname1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.chkneed1 = new System.Windows.Forms.CheckBox();
+            this.chkneed2 = new System.Windows.Forms.CheckBox();
+            this.tbnikname2 = new System.Windows.Forms.TextBox();
+            this.tbname2 = new System.Windows.Forms.TextBox();
+            this.cmbSupply2 = new System.Windows.Forms.ComboBox();
+            this.cmbType2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.btn3clear = new System.Windows.Forms.Button();
+            this.chkneed3 = new System.Windows.Forms.CheckBox();
+            this.tbnikname3 = new System.Windows.Forms.TextBox();
+            this.tbname3 = new System.Windows.Forms.TextBox();
+            this.cmbSupply3 = new System.Windows.Forms.ComboBox();
+            this.cmbType3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.btn2clear = new System.Windows.Forms.Button();
+            this.btn1clear = new System.Windows.Forms.Button();
+            this.btn4clear = new System.Windows.Forms.Button();
+            this.chkneed4 = new System.Windows.Forms.CheckBox();
+            this.tbnikname4 = new System.Windows.Forms.TextBox();
+            this.tbname4 = new System.Windows.Forms.TextBox();
+            this.cmbSupply4 = new System.Windows.Forms.ComboBox();
+            this.cmbType4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.btn5clear = new System.Windows.Forms.Button();
+            this.chkneed5 = new System.Windows.Forms.CheckBox();
+            this.tbnikname5 = new System.Windows.Forms.TextBox();
+            this.tbname5 = new System.Windows.Forms.TextBox();
+            this.cmbSupply5 = new System.Windows.Forms.ComboBox();
+            this.cmbType5 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.btn6clear = new System.Windows.Forms.Button();
+            this.chkneed6 = new System.Windows.Forms.CheckBox();
+            this.tbnikname6 = new System.Windows.Forms.TextBox();
+            this.tbname6 = new System.Windows.Forms.TextBox();
+            this.cmbSupply6 = new System.Windows.Forms.ComboBox();
+            this.cmbType6 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.btn7clear = new System.Windows.Forms.Button();
+            this.chkneed7 = new System.Windows.Forms.CheckBox();
+            this.tbnikname7 = new System.Windows.Forms.TextBox();
+            this.tbname7 = new System.Windows.Forms.TextBox();
+            this.cmbSupply7 = new System.Windows.Forms.ComboBox();
+            this.cmbType7 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.btn8clear = new System.Windows.Forms.Button();
+            this.chkneed8 = new System.Windows.Forms.CheckBox();
+            this.tbnikname8 = new System.Windows.Forms.TextBox();
+            this.tbname8 = new System.Windows.Forms.TextBox();
+            this.cmbSupply8 = new System.Windows.Forms.ComboBox();
+            this.cmbType8 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.btn9clear = new System.Windows.Forms.Button();
+            this.chkneed9 = new System.Windows.Forms.CheckBox();
+            this.tbnikname9 = new System.Windows.Forms.TextBox();
+            this.tbname9 = new System.Windows.Forms.TextBox();
+            this.cmbSupply9 = new System.Windows.Forms.ComboBox();
+            this.cmbType9 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
+            this.btn10clear = new System.Windows.Forms.Button();
+            this.chkneed10 = new System.Windows.Forms.CheckBox();
+            this.tbnikname10 = new System.Windows.Forms.TextBox();
+            this.tbname10 = new System.Windows.Forms.TextBox();
+            this.cmbSupply10 = new System.Windows.Forms.ComboBox();
+            this.cmbType10 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnInput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Type,
+            this.supply,
+            this.name,
+            this.Nikname,
+            this.Display});
             this.dataGridView1.Location = new System.Drawing.Point(17, 13);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(975, 311);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "type";
+            this.Type.HeaderText = "素材タイプ";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Width = 130;
+            // 
+            // supply
+            // 
+            this.supply.DataPropertyName = "supply";
+            this.supply.HeaderText = "提供元";
+            this.supply.Name = "supply";
+            this.supply.ReadOnly = true;
+            this.supply.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.supply.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.supply.Width = 200;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "ファイル名";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.name.Width = 285;
+            // 
+            // Nikname
+            // 
+            this.Nikname.DataPropertyName = "nikName";
+            this.Nikname.HeaderText = "ニックネーム";
+            this.Nikname.Name = "Nikname";
+            this.Nikname.ReadOnly = true;
+            this.Nikname.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nikname.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nikname.Width = 285;
+            // 
+            // Display
+            // 
+            this.Display.DataPropertyName = "needDisp";
+            this.Display.HeaderText = "表示";
+            this.Display.Name = "Display";
+            this.Display.ReadOnly = true;
+            this.Display.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Display.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Display.Width = 80;
             // 
             // label1
             // 
@@ -139,112 +202,112 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "素材タイプ";
             // 
-            // comboBox1
+            // cmbType1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(61, 363);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 25);
-            this.comboBox1.TabIndex = 4;
+            this.cmbType1.FormattingEnabled = true;
+            this.cmbType1.Location = new System.Drawing.Point(61, 363);
+            this.cmbType1.Name = "cmbType1";
+            this.cmbType1.Size = new System.Drawing.Size(102, 25);
+            this.cmbType1.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 343);
+            this.label3.Location = new System.Drawing.Point(220, 343);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "提供元";
             // 
-            // comboBox2
+            // cmbSupply1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(169, 363);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 25);
-            this.comboBox2.TabIndex = 6;
+            this.cmbSupply1.FormattingEnabled = true;
+            this.cmbSupply1.Location = new System.Drawing.Point(169, 363);
+            this.cmbSupply1.Name = "cmbSupply1";
+            this.cmbSupply1.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply1.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(387, 343);
+            this.label4.Location = new System.Drawing.Point(422, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "ファイル名";
             // 
-            // textBox1
+            // tbname1
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 25);
-            this.textBox1.TabIndex = 8;
+            this.tbname1.Location = new System.Drawing.Point(345, 363);
+            this.tbname1.Name = "tbname1";
+            this.tbname1.Size = new System.Drawing.Size(251, 25);
+            this.tbname1.TabIndex = 8;
             // 
-            // textBox2
+            // tbnikname1
             // 
-            this.textBox2.Location = new System.Drawing.Point(567, 363);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 25);
-            this.textBox2.TabIndex = 9;
+            this.tbnikname1.Location = new System.Drawing.Point(602, 363);
+            this.tbnikname1.Name = "tbnikname1";
+            this.tbnikname1.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname1.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(631, 343);
+            this.label5.Location = new System.Drawing.Point(666, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "ニックネーム";
             // 
-            // checkBox1
+            // chkneed1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(824, 366);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(87, 21);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "表示必須";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkneed1.AutoSize = true;
+            this.chkneed1.Location = new System.Drawing.Point(859, 366);
+            this.chkneed1.Name = "chkneed1";
+            this.chkneed1.Size = new System.Drawing.Size(87, 21);
+            this.chkneed1.TabIndex = 11;
+            this.chkneed1.Text = "表示必須";
+            this.chkneed1.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkneed2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(824, 397);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(87, 21);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "表示必須";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkneed2.AutoSize = true;
+            this.chkneed2.Location = new System.Drawing.Point(859, 397);
+            this.chkneed2.Name = "chkneed2";
+            this.chkneed2.Size = new System.Drawing.Size(87, 21);
+            this.chkneed2.TabIndex = 18;
+            this.chkneed2.Text = "表示必須";
+            this.chkneed2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // tbnikname2
             // 
-            this.textBox3.Location = new System.Drawing.Point(567, 394);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 25);
-            this.textBox3.TabIndex = 17;
+            this.tbnikname2.Location = new System.Drawing.Point(602, 394);
+            this.tbnikname2.Name = "tbnikname2";
+            this.tbnikname2.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname2.TabIndex = 17;
             // 
-            // textBox4
+            // tbname2
             // 
-            this.textBox4.Location = new System.Drawing.Point(310, 394);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(251, 25);
-            this.textBox4.TabIndex = 16;
+            this.tbname2.Location = new System.Drawing.Point(345, 394);
+            this.tbname2.Name = "tbname2";
+            this.tbname2.Size = new System.Drawing.Size(251, 25);
+            this.tbname2.TabIndex = 16;
             // 
-            // comboBox3
+            // cmbSupply2
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(169, 394);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(135, 25);
-            this.comboBox3.TabIndex = 15;
+            this.cmbSupply2.FormattingEnabled = true;
+            this.cmbSupply2.Location = new System.Drawing.Point(169, 394);
+            this.cmbSupply2.Name = "cmbSupply2";
+            this.cmbSupply2.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply2.TabIndex = 15;
             // 
-            // comboBox4
+            // cmbType2
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(61, 394);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(102, 25);
-            this.comboBox4.TabIndex = 14;
+            this.cmbType2.FormattingEnabled = true;
+            this.cmbType2.Location = new System.Drawing.Point(61, 394);
+            this.cmbType2.Name = "cmbType2";
+            this.cmbType2.Size = new System.Drawing.Size(102, 25);
+            this.cmbType2.TabIndex = 14;
             // 
             // label6
             // 
@@ -255,54 +318,54 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "2:";
             // 
-            // button3
+            // btn3clear
             // 
-            this.button3.Location = new System.Drawing.Point(917, 425);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 23);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "C";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn3clear.Location = new System.Drawing.Point(952, 425);
+            this.btn3clear.Name = "btn3clear";
+            this.btn3clear.Size = new System.Drawing.Size(37, 23);
+            this.btn3clear.TabIndex = 26;
+            this.btn3clear.Text = "C";
+            this.btn3clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkneed3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(824, 428);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(87, 21);
-            this.checkBox3.TabIndex = 25;
-            this.checkBox3.Text = "表示必須";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkneed3.AutoSize = true;
+            this.chkneed3.Location = new System.Drawing.Point(859, 428);
+            this.chkneed3.Name = "chkneed3";
+            this.chkneed3.Size = new System.Drawing.Size(87, 21);
+            this.chkneed3.TabIndex = 25;
+            this.chkneed3.Text = "表示必須";
+            this.chkneed3.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // tbnikname3
             // 
-            this.textBox5.Location = new System.Drawing.Point(567, 425);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(251, 25);
-            this.textBox5.TabIndex = 24;
+            this.tbnikname3.Location = new System.Drawing.Point(602, 425);
+            this.tbnikname3.Name = "tbnikname3";
+            this.tbnikname3.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname3.TabIndex = 24;
             // 
-            // textBox6
+            // tbname3
             // 
-            this.textBox6.Location = new System.Drawing.Point(310, 425);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(251, 25);
-            this.textBox6.TabIndex = 23;
+            this.tbname3.Location = new System.Drawing.Point(345, 425);
+            this.tbname3.Name = "tbname3";
+            this.tbname3.Size = new System.Drawing.Size(251, 25);
+            this.tbname3.TabIndex = 23;
             // 
-            // comboBox5
+            // cmbSupply3
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(169, 425);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(135, 25);
-            this.comboBox5.TabIndex = 22;
+            this.cmbSupply3.FormattingEnabled = true;
+            this.cmbSupply3.Location = new System.Drawing.Point(169, 425);
+            this.cmbSupply3.Name = "cmbSupply3";
+            this.cmbSupply3.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply3.TabIndex = 22;
             // 
-            // comboBox6
+            // cmbType3
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(61, 425);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(102, 25);
-            this.comboBox6.TabIndex = 21;
+            this.cmbType3.FormattingEnabled = true;
+            this.cmbType3.Location = new System.Drawing.Point(61, 425);
+            this.cmbType3.Name = "cmbType3";
+            this.cmbType3.Size = new System.Drawing.Size(102, 25);
+            this.cmbType3.TabIndex = 21;
             // 
             // label7
             // 
@@ -313,72 +376,72 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "3:";
             // 
-            // button4
+            // btn2clear
             // 
-            this.button4.Location = new System.Drawing.Point(917, 394);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "C";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn2clear.Location = new System.Drawing.Point(952, 394);
+            this.btn2clear.Name = "btn2clear";
+            this.btn2clear.Size = new System.Drawing.Size(37, 23);
+            this.btn2clear.TabIndex = 27;
+            this.btn2clear.Text = "C";
+            this.btn2clear.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn1clear
             // 
-            this.button1.Location = new System.Drawing.Point(917, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "C";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn1clear.Location = new System.Drawing.Point(952, 363);
+            this.btn1clear.Name = "btn1clear";
+            this.btn1clear.Size = new System.Drawing.Size(37, 23);
+            this.btn1clear.TabIndex = 28;
+            this.btn1clear.Text = "C";
+            this.btn1clear.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn4clear
             // 
-            this.button2.Location = new System.Drawing.Point(917, 456);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 23);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "C";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn4clear.Location = new System.Drawing.Point(952, 456);
+            this.btn4clear.Name = "btn4clear";
+            this.btn4clear.Size = new System.Drawing.Size(37, 23);
+            this.btn4clear.TabIndex = 35;
+            this.btn4clear.Text = "C";
+            this.btn4clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkneed4
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(824, 459);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(87, 21);
-            this.checkBox4.TabIndex = 34;
-            this.checkBox4.Text = "表示必須";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkneed4.AutoSize = true;
+            this.chkneed4.Location = new System.Drawing.Point(859, 459);
+            this.chkneed4.Name = "chkneed4";
+            this.chkneed4.Size = new System.Drawing.Size(87, 21);
+            this.chkneed4.TabIndex = 34;
+            this.chkneed4.Text = "表示必須";
+            this.chkneed4.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // tbnikname4
             // 
-            this.textBox7.Location = new System.Drawing.Point(567, 456);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(251, 25);
-            this.textBox7.TabIndex = 33;
+            this.tbnikname4.Location = new System.Drawing.Point(602, 456);
+            this.tbnikname4.Name = "tbnikname4";
+            this.tbnikname4.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname4.TabIndex = 33;
             // 
-            // textBox8
+            // tbname4
             // 
-            this.textBox8.Location = new System.Drawing.Point(310, 456);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(251, 25);
-            this.textBox8.TabIndex = 32;
+            this.tbname4.Location = new System.Drawing.Point(345, 456);
+            this.tbname4.Name = "tbname4";
+            this.tbname4.Size = new System.Drawing.Size(251, 25);
+            this.tbname4.TabIndex = 32;
             // 
-            // comboBox7
+            // cmbSupply4
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(169, 456);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(135, 25);
-            this.comboBox7.TabIndex = 31;
+            this.cmbSupply4.FormattingEnabled = true;
+            this.cmbSupply4.Location = new System.Drawing.Point(169, 456);
+            this.cmbSupply4.Name = "cmbSupply4";
+            this.cmbSupply4.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply4.TabIndex = 31;
             // 
-            // comboBox8
+            // cmbType4
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(61, 456);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(102, 25);
-            this.comboBox8.TabIndex = 30;
+            this.cmbType4.FormattingEnabled = true;
+            this.cmbType4.Location = new System.Drawing.Point(61, 456);
+            this.cmbType4.Name = "cmbType4";
+            this.cmbType4.Size = new System.Drawing.Size(102, 25);
+            this.cmbType4.TabIndex = 30;
             // 
             // label8
             // 
@@ -389,54 +452,54 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "4:";
             // 
-            // button5
+            // btn5clear
             // 
-            this.button5.Location = new System.Drawing.Point(917, 487);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(37, 23);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "C";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn5clear.Location = new System.Drawing.Point(952, 487);
+            this.btn5clear.Name = "btn5clear";
+            this.btn5clear.Size = new System.Drawing.Size(37, 23);
+            this.btn5clear.TabIndex = 42;
+            this.btn5clear.Text = "C";
+            this.btn5clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkneed5
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(824, 490);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(87, 21);
-            this.checkBox5.TabIndex = 41;
-            this.checkBox5.Text = "表示必須";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkneed5.AutoSize = true;
+            this.chkneed5.Location = new System.Drawing.Point(859, 490);
+            this.chkneed5.Name = "chkneed5";
+            this.chkneed5.Size = new System.Drawing.Size(87, 21);
+            this.chkneed5.TabIndex = 41;
+            this.chkneed5.Text = "表示必須";
+            this.chkneed5.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // tbnikname5
             // 
-            this.textBox9.Location = new System.Drawing.Point(567, 487);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(251, 25);
-            this.textBox9.TabIndex = 40;
+            this.tbnikname5.Location = new System.Drawing.Point(602, 487);
+            this.tbnikname5.Name = "tbnikname5";
+            this.tbnikname5.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname5.TabIndex = 40;
             // 
-            // textBox10
+            // tbname5
             // 
-            this.textBox10.Location = new System.Drawing.Point(310, 487);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(251, 25);
-            this.textBox10.TabIndex = 39;
+            this.tbname5.Location = new System.Drawing.Point(345, 487);
+            this.tbname5.Name = "tbname5";
+            this.tbname5.Size = new System.Drawing.Size(251, 25);
+            this.tbname5.TabIndex = 39;
             // 
-            // comboBox9
+            // cmbSupply5
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(169, 487);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(135, 25);
-            this.comboBox9.TabIndex = 38;
+            this.cmbSupply5.FormattingEnabled = true;
+            this.cmbSupply5.Location = new System.Drawing.Point(169, 487);
+            this.cmbSupply5.Name = "cmbSupply5";
+            this.cmbSupply5.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply5.TabIndex = 38;
             // 
-            // comboBox10
+            // cmbType5
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(61, 487);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(102, 25);
-            this.comboBox10.TabIndex = 37;
+            this.cmbType5.FormattingEnabled = true;
+            this.cmbType5.Location = new System.Drawing.Point(61, 487);
+            this.cmbType5.Name = "cmbType5";
+            this.cmbType5.Size = new System.Drawing.Size(102, 25);
+            this.cmbType5.TabIndex = 37;
             // 
             // label9
             // 
@@ -447,54 +510,54 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "5:";
             // 
-            // button6
+            // btn6clear
             // 
-            this.button6.Location = new System.Drawing.Point(917, 518);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(37, 23);
-            this.button6.TabIndex = 49;
-            this.button6.Text = "C";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn6clear.Location = new System.Drawing.Point(952, 518);
+            this.btn6clear.Name = "btn6clear";
+            this.btn6clear.Size = new System.Drawing.Size(37, 23);
+            this.btn6clear.TabIndex = 49;
+            this.btn6clear.Text = "C";
+            this.btn6clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkneed6
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(824, 521);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(87, 21);
-            this.checkBox6.TabIndex = 48;
-            this.checkBox6.Text = "表示必須";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkneed6.AutoSize = true;
+            this.chkneed6.Location = new System.Drawing.Point(859, 521);
+            this.chkneed6.Name = "chkneed6";
+            this.chkneed6.Size = new System.Drawing.Size(87, 21);
+            this.chkneed6.TabIndex = 48;
+            this.chkneed6.Text = "表示必須";
+            this.chkneed6.UseVisualStyleBackColor = true;
             // 
-            // textBox11
+            // tbnikname6
             // 
-            this.textBox11.Location = new System.Drawing.Point(567, 518);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(251, 25);
-            this.textBox11.TabIndex = 47;
+            this.tbnikname6.Location = new System.Drawing.Point(602, 518);
+            this.tbnikname6.Name = "tbnikname6";
+            this.tbnikname6.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname6.TabIndex = 47;
             // 
-            // textBox12
+            // tbname6
             // 
-            this.textBox12.Location = new System.Drawing.Point(310, 518);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(251, 25);
-            this.textBox12.TabIndex = 46;
+            this.tbname6.Location = new System.Drawing.Point(345, 518);
+            this.tbname6.Name = "tbname6";
+            this.tbname6.Size = new System.Drawing.Size(251, 25);
+            this.tbname6.TabIndex = 46;
             // 
-            // comboBox11
+            // cmbSupply6
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(169, 518);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(135, 25);
-            this.comboBox11.TabIndex = 45;
+            this.cmbSupply6.FormattingEnabled = true;
+            this.cmbSupply6.Location = new System.Drawing.Point(169, 518);
+            this.cmbSupply6.Name = "cmbSupply6";
+            this.cmbSupply6.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply6.TabIndex = 45;
             // 
-            // comboBox12
+            // cmbType6
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(61, 518);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(102, 25);
-            this.comboBox12.TabIndex = 44;
+            this.cmbType6.FormattingEnabled = true;
+            this.cmbType6.Location = new System.Drawing.Point(61, 518);
+            this.cmbType6.Name = "cmbType6";
+            this.cmbType6.Size = new System.Drawing.Size(102, 25);
+            this.cmbType6.TabIndex = 44;
             // 
             // label10
             // 
@@ -505,54 +568,54 @@
             this.label10.TabIndex = 43;
             this.label10.Text = "6:";
             // 
-            // button7
+            // btn7clear
             // 
-            this.button7.Location = new System.Drawing.Point(917, 549);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(37, 23);
-            this.button7.TabIndex = 56;
-            this.button7.Text = "C";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn7clear.Location = new System.Drawing.Point(952, 549);
+            this.btn7clear.Name = "btn7clear";
+            this.btn7clear.Size = new System.Drawing.Size(37, 23);
+            this.btn7clear.TabIndex = 56;
+            this.btn7clear.Text = "C";
+            this.btn7clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chkneed7
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(824, 552);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(87, 21);
-            this.checkBox7.TabIndex = 55;
-            this.checkBox7.Text = "表示必須";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkneed7.AutoSize = true;
+            this.chkneed7.Location = new System.Drawing.Point(859, 552);
+            this.chkneed7.Name = "chkneed7";
+            this.chkneed7.Size = new System.Drawing.Size(87, 21);
+            this.chkneed7.TabIndex = 55;
+            this.chkneed7.Text = "表示必須";
+            this.chkneed7.UseVisualStyleBackColor = true;
             // 
-            // textBox13
+            // tbnikname7
             // 
-            this.textBox13.Location = new System.Drawing.Point(567, 549);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(251, 25);
-            this.textBox13.TabIndex = 54;
+            this.tbnikname7.Location = new System.Drawing.Point(602, 549);
+            this.tbnikname7.Name = "tbnikname7";
+            this.tbnikname7.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname7.TabIndex = 54;
             // 
-            // textBox14
+            // tbname7
             // 
-            this.textBox14.Location = new System.Drawing.Point(310, 549);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(251, 25);
-            this.textBox14.TabIndex = 53;
+            this.tbname7.Location = new System.Drawing.Point(345, 549);
+            this.tbname7.Name = "tbname7";
+            this.tbname7.Size = new System.Drawing.Size(251, 25);
+            this.tbname7.TabIndex = 53;
             // 
-            // comboBox13
+            // cmbSupply7
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(169, 549);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(135, 25);
-            this.comboBox13.TabIndex = 52;
+            this.cmbSupply7.FormattingEnabled = true;
+            this.cmbSupply7.Location = new System.Drawing.Point(169, 549);
+            this.cmbSupply7.Name = "cmbSupply7";
+            this.cmbSupply7.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply7.TabIndex = 52;
             // 
-            // comboBox14
+            // cmbType7
             // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(61, 549);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(102, 25);
-            this.comboBox14.TabIndex = 51;
+            this.cmbType7.FormattingEnabled = true;
+            this.cmbType7.Location = new System.Drawing.Point(61, 549);
+            this.cmbType7.Name = "cmbType7";
+            this.cmbType7.Size = new System.Drawing.Size(102, 25);
+            this.cmbType7.TabIndex = 51;
             // 
             // label11
             // 
@@ -563,54 +626,54 @@
             this.label11.TabIndex = 50;
             this.label11.Text = "7:";
             // 
-            // button8
+            // btn8clear
             // 
-            this.button8.Location = new System.Drawing.Point(917, 580);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(37, 23);
-            this.button8.TabIndex = 63;
-            this.button8.Text = "C";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn8clear.Location = new System.Drawing.Point(952, 580);
+            this.btn8clear.Name = "btn8clear";
+            this.btn8clear.Size = new System.Drawing.Size(37, 23);
+            this.btn8clear.TabIndex = 63;
+            this.btn8clear.Text = "C";
+            this.btn8clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // chkneed8
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(824, 583);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(87, 21);
-            this.checkBox8.TabIndex = 62;
-            this.checkBox8.Text = "表示必須";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkneed8.AutoSize = true;
+            this.chkneed8.Location = new System.Drawing.Point(859, 583);
+            this.chkneed8.Name = "chkneed8";
+            this.chkneed8.Size = new System.Drawing.Size(87, 21);
+            this.chkneed8.TabIndex = 62;
+            this.chkneed8.Text = "表示必須";
+            this.chkneed8.UseVisualStyleBackColor = true;
             // 
-            // textBox15
+            // tbnikname8
             // 
-            this.textBox15.Location = new System.Drawing.Point(567, 580);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(251, 25);
-            this.textBox15.TabIndex = 61;
+            this.tbnikname8.Location = new System.Drawing.Point(602, 580);
+            this.tbnikname8.Name = "tbnikname8";
+            this.tbnikname8.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname8.TabIndex = 61;
             // 
-            // textBox16
+            // tbname8
             // 
-            this.textBox16.Location = new System.Drawing.Point(310, 580);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(251, 25);
-            this.textBox16.TabIndex = 60;
+            this.tbname8.Location = new System.Drawing.Point(345, 580);
+            this.tbname8.Name = "tbname8";
+            this.tbname8.Size = new System.Drawing.Size(251, 25);
+            this.tbname8.TabIndex = 60;
             // 
-            // comboBox15
+            // cmbSupply8
             // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(169, 580);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(135, 25);
-            this.comboBox15.TabIndex = 59;
+            this.cmbSupply8.FormattingEnabled = true;
+            this.cmbSupply8.Location = new System.Drawing.Point(169, 580);
+            this.cmbSupply8.Name = "cmbSupply8";
+            this.cmbSupply8.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply8.TabIndex = 59;
             // 
-            // comboBox16
+            // cmbType8
             // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(61, 580);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(102, 25);
-            this.comboBox16.TabIndex = 58;
+            this.cmbType8.FormattingEnabled = true;
+            this.cmbType8.Location = new System.Drawing.Point(61, 580);
+            this.cmbType8.Name = "cmbType8";
+            this.cmbType8.Size = new System.Drawing.Size(102, 25);
+            this.cmbType8.TabIndex = 58;
             // 
             // label12
             // 
@@ -621,54 +684,54 @@
             this.label12.TabIndex = 57;
             this.label12.Text = "8:";
             // 
-            // button9
+            // btn9clear
             // 
-            this.button9.Location = new System.Drawing.Point(917, 611);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(37, 23);
-            this.button9.TabIndex = 70;
-            this.button9.Text = "C";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn9clear.Location = new System.Drawing.Point(952, 611);
+            this.btn9clear.Name = "btn9clear";
+            this.btn9clear.Size = new System.Drawing.Size(37, 23);
+            this.btn9clear.TabIndex = 70;
+            this.btn9clear.Text = "C";
+            this.btn9clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // chkneed9
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(824, 614);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(87, 21);
-            this.checkBox9.TabIndex = 69;
-            this.checkBox9.Text = "表示必須";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.chkneed9.AutoSize = true;
+            this.chkneed9.Location = new System.Drawing.Point(859, 614);
+            this.chkneed9.Name = "chkneed9";
+            this.chkneed9.Size = new System.Drawing.Size(87, 21);
+            this.chkneed9.TabIndex = 69;
+            this.chkneed9.Text = "表示必須";
+            this.chkneed9.UseVisualStyleBackColor = true;
             // 
-            // textBox17
+            // tbnikname9
             // 
-            this.textBox17.Location = new System.Drawing.Point(567, 611);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(251, 25);
-            this.textBox17.TabIndex = 68;
+            this.tbnikname9.Location = new System.Drawing.Point(602, 611);
+            this.tbnikname9.Name = "tbnikname9";
+            this.tbnikname9.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname9.TabIndex = 68;
             // 
-            // textBox18
+            // tbname9
             // 
-            this.textBox18.Location = new System.Drawing.Point(310, 611);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(251, 25);
-            this.textBox18.TabIndex = 67;
+            this.tbname9.Location = new System.Drawing.Point(345, 611);
+            this.tbname9.Name = "tbname9";
+            this.tbname9.Size = new System.Drawing.Size(251, 25);
+            this.tbname9.TabIndex = 67;
             // 
-            // comboBox17
+            // cmbSupply9
             // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(169, 611);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(135, 25);
-            this.comboBox17.TabIndex = 66;
+            this.cmbSupply9.FormattingEnabled = true;
+            this.cmbSupply9.Location = new System.Drawing.Point(169, 611);
+            this.cmbSupply9.Name = "cmbSupply9";
+            this.cmbSupply9.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply9.TabIndex = 66;
             // 
-            // comboBox18
+            // cmbType9
             // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(61, 611);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(102, 25);
-            this.comboBox18.TabIndex = 65;
+            this.cmbType9.FormattingEnabled = true;
+            this.cmbType9.Location = new System.Drawing.Point(61, 611);
+            this.cmbType9.Name = "cmbType9";
+            this.cmbType9.Size = new System.Drawing.Size(102, 25);
+            this.cmbType9.TabIndex = 65;
             // 
             // label13
             // 
@@ -679,54 +742,54 @@
             this.label13.TabIndex = 64;
             this.label13.Text = "9:";
             // 
-            // button10
+            // btn10clear
             // 
-            this.button10.Location = new System.Drawing.Point(917, 642);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(37, 23);
-            this.button10.TabIndex = 77;
-            this.button10.Text = "C";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn10clear.Location = new System.Drawing.Point(952, 642);
+            this.btn10clear.Name = "btn10clear";
+            this.btn10clear.Size = new System.Drawing.Size(37, 23);
+            this.btn10clear.TabIndex = 77;
+            this.btn10clear.Text = "C";
+            this.btn10clear.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // chkneed10
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(824, 645);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(87, 21);
-            this.checkBox10.TabIndex = 76;
-            this.checkBox10.Text = "表示必須";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.chkneed10.AutoSize = true;
+            this.chkneed10.Location = new System.Drawing.Point(859, 645);
+            this.chkneed10.Name = "chkneed10";
+            this.chkneed10.Size = new System.Drawing.Size(87, 21);
+            this.chkneed10.TabIndex = 76;
+            this.chkneed10.Text = "表示必須";
+            this.chkneed10.UseVisualStyleBackColor = true;
             // 
-            // textBox19
+            // tbnikname10
             // 
-            this.textBox19.Location = new System.Drawing.Point(567, 642);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(251, 25);
-            this.textBox19.TabIndex = 75;
+            this.tbnikname10.Location = new System.Drawing.Point(602, 642);
+            this.tbnikname10.Name = "tbnikname10";
+            this.tbnikname10.Size = new System.Drawing.Size(251, 25);
+            this.tbnikname10.TabIndex = 75;
             // 
-            // textBox20
+            // tbname10
             // 
-            this.textBox20.Location = new System.Drawing.Point(310, 642);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(251, 25);
-            this.textBox20.TabIndex = 74;
+            this.tbname10.Location = new System.Drawing.Point(345, 642);
+            this.tbname10.Name = "tbname10";
+            this.tbname10.Size = new System.Drawing.Size(251, 25);
+            this.tbname10.TabIndex = 74;
             // 
-            // comboBox19
+            // cmbSupply10
             // 
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(169, 642);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(135, 25);
-            this.comboBox19.TabIndex = 73;
+            this.cmbSupply10.FormattingEnabled = true;
+            this.cmbSupply10.Location = new System.Drawing.Point(169, 642);
+            this.cmbSupply10.Name = "cmbSupply10";
+            this.cmbSupply10.Size = new System.Drawing.Size(170, 25);
+            this.cmbSupply10.TabIndex = 73;
             // 
-            // comboBox20
+            // cmbType10
             // 
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(61, 642);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(102, 25);
-            this.comboBox20.TabIndex = 72;
+            this.cmbType10.FormattingEnabled = true;
+            this.cmbType10.Location = new System.Drawing.Point(61, 642);
+            this.cmbType10.Name = "cmbType10";
+            this.cmbType10.Size = new System.Drawing.Size(102, 25);
+            this.cmbType10.TabIndex = 72;
             // 
             // label14
             // 
@@ -737,123 +800,123 @@
             this.label14.TabIndex = 71;
             this.label14.Text = "10:";
             // 
-            // button11
+            // btnUpdate
             // 
-            this.button11.Location = new System.Drawing.Point(693, 695);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(136, 47);
-            this.button11.TabIndex = 78;
-            this.button11.Text = "データ更新";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(693, 695);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(136, 47);
+            this.btnUpdate.TabIndex = 78;
+            this.btnUpdate.Text = "データ更新";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnClear
             // 
-            this.button12.Location = new System.Drawing.Point(844, 695);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(136, 47);
-            this.button12.TabIndex = 79;
-            this.button12.Text = "画面のクリア";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(844, 695);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(136, 47);
+            this.btnClear.TabIndex = 79;
+            this.btnClear.Text = "画面のクリア";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnDelete
             // 
-            this.button13.Location = new System.Drawing.Point(390, 695);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(136, 47);
-            this.button13.TabIndex = 80;
-            this.button13.Text = "データ削除";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(390, 695);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(136, 47);
+            this.btnDelete.TabIndex = 80;
+            this.btnDelete.Text = "データ削除";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btnInput
             // 
-            this.button14.Location = new System.Drawing.Point(537, 695);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(139, 47);
-            this.button14.TabIndex = 81;
-            this.button14.Text = "データ登録";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnInput.Location = new System.Drawing.Point(537, 695);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(139, 47);
+            this.btnInput.TabIndex = 81;
+            this.btnInput.Text = "データ登録";
+            this.btnInput.UseVisualStyleBackColor = true;
             // 
             // dataedit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 754);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.comboBox19);
-            this.Controls.Add(this.comboBox20);
+            this.Controls.Add(this.btnInput);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btn10clear);
+            this.Controls.Add(this.chkneed10);
+            this.Controls.Add(this.tbnikname10);
+            this.Controls.Add(this.tbname10);
+            this.Controls.Add(this.cmbSupply10);
+            this.Controls.Add(this.cmbType10);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.comboBox17);
-            this.Controls.Add(this.comboBox18);
+            this.Controls.Add(this.btn9clear);
+            this.Controls.Add(this.chkneed9);
+            this.Controls.Add(this.tbnikname9);
+            this.Controls.Add(this.tbname9);
+            this.Controls.Add(this.cmbSupply9);
+            this.Controls.Add(this.cmbType9);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.comboBox15);
-            this.Controls.Add(this.comboBox16);
+            this.Controls.Add(this.btn8clear);
+            this.Controls.Add(this.chkneed8);
+            this.Controls.Add(this.tbnikname8);
+            this.Controls.Add(this.tbname8);
+            this.Controls.Add(this.cmbSupply8);
+            this.Controls.Add(this.cmbType8);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.comboBox13);
-            this.Controls.Add(this.comboBox14);
+            this.Controls.Add(this.btn7clear);
+            this.Controls.Add(this.chkneed7);
+            this.Controls.Add(this.tbnikname7);
+            this.Controls.Add(this.tbname7);
+            this.Controls.Add(this.cmbSupply7);
+            this.Controls.Add(this.cmbType7);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.comboBox11);
-            this.Controls.Add(this.comboBox12);
+            this.Controls.Add(this.btn6clear);
+            this.Controls.Add(this.chkneed6);
+            this.Controls.Add(this.tbnikname6);
+            this.Controls.Add(this.tbname6);
+            this.Controls.Add(this.cmbSupply6);
+            this.Controls.Add(this.cmbType6);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.comboBox9);
-            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.btn5clear);
+            this.Controls.Add(this.chkneed5);
+            this.Controls.Add(this.tbnikname5);
+            this.Controls.Add(this.tbname5);
+            this.Controls.Add(this.cmbSupply5);
+            this.Controls.Add(this.cmbType5);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.btn4clear);
+            this.Controls.Add(this.chkneed4);
+            this.Controls.Add(this.tbnikname4);
+            this.Controls.Add(this.tbname4);
+            this.Controls.Add(this.cmbSupply4);
+            this.Controls.Add(this.cmbType4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.btn1clear);
+            this.Controls.Add(this.btn2clear);
+            this.Controls.Add(this.btn3clear);
+            this.Controls.Add(this.chkneed3);
+            this.Controls.Add(this.tbnikname3);
+            this.Controls.Add(this.tbname3);
+            this.Controls.Add(this.cmbSupply3);
+            this.Controls.Add(this.cmbType3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.chkneed2);
+            this.Controls.Add(this.tbnikname2);
+            this.Controls.Add(this.tbname2);
+            this.Controls.Add(this.cmbSupply2);
+            this.Controls.Add(this.cmbType2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chkneed1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbnikname1);
+            this.Controls.Add(this.tbname1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbSupply1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbType1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -862,6 +925,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.Name = "dataedit";
             this.Text = "データ編集";
+            this.Load += new System.EventHandler(this.dataedit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -873,81 +937,86 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbType1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbSupply1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbname1;
+        private System.Windows.Forms.TextBox tbnikname1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.CheckBox chkneed1;
+        private System.Windows.Forms.CheckBox chkneed2;
+        private System.Windows.Forms.TextBox tbnikname2;
+        private System.Windows.Forms.TextBox tbname2;
+        private System.Windows.Forms.ComboBox cmbSupply2;
+        private System.Windows.Forms.ComboBox cmbType2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Button btn3clear;
+        private System.Windows.Forms.CheckBox chkneed3;
+        private System.Windows.Forms.TextBox tbnikname3;
+        private System.Windows.Forms.TextBox tbname3;
+        private System.Windows.Forms.ComboBox cmbSupply3;
+        private System.Windows.Forms.ComboBox cmbType3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Button btn2clear;
+        private System.Windows.Forms.Button btn1clear;
+        private System.Windows.Forms.Button btn4clear;
+        private System.Windows.Forms.CheckBox chkneed4;
+        private System.Windows.Forms.TextBox tbnikname4;
+        private System.Windows.Forms.TextBox tbname4;
+        private System.Windows.Forms.ComboBox cmbSupply4;
+        private System.Windows.Forms.ComboBox cmbType4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Button btn5clear;
+        private System.Windows.Forms.CheckBox chkneed5;
+        private System.Windows.Forms.TextBox tbnikname5;
+        private System.Windows.Forms.TextBox tbname5;
+        private System.Windows.Forms.ComboBox cmbSupply5;
+        private System.Windows.Forms.ComboBox cmbType5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.Button btn6clear;
+        private System.Windows.Forms.CheckBox chkneed6;
+        private System.Windows.Forms.TextBox tbnikname6;
+        private System.Windows.Forms.TextBox tbname6;
+        private System.Windows.Forms.ComboBox cmbSupply6;
+        private System.Windows.Forms.ComboBox cmbType6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.Button btn7clear;
+        private System.Windows.Forms.CheckBox chkneed7;
+        private System.Windows.Forms.TextBox tbnikname7;
+        private System.Windows.Forms.TextBox tbname7;
+        private System.Windows.Forms.ComboBox cmbSupply7;
+        private System.Windows.Forms.ComboBox cmbType7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.Button btn8clear;
+        private System.Windows.Forms.CheckBox chkneed8;
+        private System.Windows.Forms.TextBox tbnikname8;
+        private System.Windows.Forms.TextBox tbname8;
+        private System.Windows.Forms.ComboBox cmbSupply8;
+        private System.Windows.Forms.ComboBox cmbType8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.Button btn9clear;
+        private System.Windows.Forms.CheckBox chkneed9;
+        private System.Windows.Forms.TextBox tbnikname9;
+        private System.Windows.Forms.TextBox tbname9;
+        private System.Windows.Forms.ComboBox cmbSupply9;
+        private System.Windows.Forms.ComboBox cmbType9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.ComboBox comboBox20;
+        private System.Windows.Forms.Button btn10clear;
+        private System.Windows.Forms.CheckBox chkneed10;
+        private System.Windows.Forms.TextBox tbnikname10;
+        private System.Windows.Forms.TextBox tbname10;
+        private System.Windows.Forms.ComboBox cmbSupply10;
+        private System.Windows.Forms.ComboBox cmbType10;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnInput;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supply;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nikname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Display;
     }
 }

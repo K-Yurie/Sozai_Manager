@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowAndCopy));
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supply = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.disp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nikname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txDisplay = new System.Windows.Forms.TextBox();
             this.rdoNewrowHoot = new System.Windows.Forms.RadioButton();
             this.rdoSrashHoot = new System.Windows.Forms.RadioButton();
@@ -58,7 +63,7 @@
             this.chkNeedOnlyDisp = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSoat = new System.Windows.Forms.Button();
-            this.btnCSV = new System.Windows.Forms.Button();
+            this.btnExportSupply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.gbWriteHoot.SuspendLayout();
             this.gbWriteHead.SuspendLayout();
@@ -67,13 +72,62 @@
             // 
             // dataGrid
             // 
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.type,
+            this.supply,
+            this.name,
+            this.disp,
+            this.nikname});
             this.dataGrid.Location = new System.Drawing.Point(17, 23);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
+            this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowTemplate.Height = 21;
             this.dataGrid.Size = new System.Drawing.Size(687, 267);
             this.dataGrid.TabIndex = 0;
+            // 
+            // type
+            // 
+            this.type.DataPropertyName = "type";
+            this.type.HeaderText = "タイプ";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
+            // 
+            // supply
+            // 
+            this.supply.DataPropertyName = "supply";
+            this.supply.HeaderText = "提供元";
+            this.supply.Name = "supply";
+            this.supply.ReadOnly = true;
+            this.supply.Width = 150;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "素材正式名";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 180;
+            // 
+            // disp
+            // 
+            this.disp.DataPropertyName = "needDisp";
+            this.disp.HeaderText = "表示";
+            this.disp.Name = "disp";
+            this.disp.ReadOnly = true;
+            this.disp.Width = 80;
+            // 
+            // nikname
+            // 
+            this.nikname.DataPropertyName = "nikName";
+            this.nikname.HeaderText = "ニックネーム";
+            this.nikname.Name = "nikname";
+            this.nikname.ReadOnly = true;
+            this.nikname.Width = 180;
             // 
             // txDisplay
             // 
@@ -88,6 +142,7 @@
             // rdoNewrowHoot
             // 
             this.rdoNewrowHoot.AutoSize = true;
+            this.rdoNewrowHoot.Checked = true;
             this.rdoNewrowHoot.Location = new System.Drawing.Point(11, 23);
             this.rdoNewrowHoot.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.rdoNewrowHoot.Name = "rdoNewrowHoot";
@@ -104,7 +159,6 @@
             this.rdoSrashHoot.Name = "rdoSrashHoot";
             this.rdoSrashHoot.Size = new System.Drawing.Size(125, 21);
             this.rdoSrashHoot.TabIndex = 3;
-            this.rdoSrashHoot.TabStop = true;
             this.rdoSrashHoot.Text = "/(スラッシュ)";
             this.rdoSrashHoot.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +169,6 @@
             this.rdoBrankHoot.Name = "rdoBrankHoot";
             this.rdoBrankHoot.Size = new System.Drawing.Size(56, 21);
             this.rdoBrankHoot.TabIndex = 4;
-            this.rdoBrankHoot.TabStop = true;
             this.rdoBrankHoot.Text = "空白";
             this.rdoBrankHoot.UseVisualStyleBackColor = true;
             // 
@@ -141,7 +194,6 @@
             this.rdoHootLess.Name = "rdoHootLess";
             this.rdoHootLess.Size = new System.Drawing.Size(56, 21);
             this.rdoHootLess.TabIndex = 7;
-            this.rdoHootLess.TabStop = true;
             this.rdoHootLess.Text = "なし";
             this.rdoHootLess.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +212,6 @@
             this.rdoOriginalHoot.Name = "rdoOriginalHoot";
             this.rdoOriginalHoot.Size = new System.Drawing.Size(56, 21);
             this.rdoOriginalHoot.TabIndex = 5;
-            this.rdoOriginalHoot.TabStop = true;
             this.rdoOriginalHoot.Text = "指定";
             this.rdoOriginalHoot.UseVisualStyleBackColor = true;
             // 
@@ -171,7 +222,7 @@
             this.btnExportText.Name = "btnExportText";
             this.btnExportText.Size = new System.Drawing.Size(67, 124);
             this.btnExportText.TabIndex = 6;
-            this.btnExportText.Text = "テキスト\r\n抽出";
+            this.btnExportText.Text = "データ\r\n抽出";
             this.btnExportText.UseVisualStyleBackColor = true;
             // 
             // gbWriteHead
@@ -196,7 +247,6 @@
             this.rdoHeadLess.Name = "rdoHeadLess";
             this.rdoHeadLess.Size = new System.Drawing.Size(56, 21);
             this.rdoHeadLess.TabIndex = 7;
-            this.rdoHeadLess.TabStop = true;
             this.rdoHeadLess.Text = "なし";
             this.rdoHeadLess.UseVisualStyleBackColor = true;
             // 
@@ -215,7 +265,6 @@
             this.rdoOriginalHead.Name = "rdoOriginalHead";
             this.rdoOriginalHead.Size = new System.Drawing.Size(56, 21);
             this.rdoOriginalHead.TabIndex = 5;
-            this.rdoOriginalHead.TabStop = true;
             this.rdoOriginalHead.Text = "指定";
             this.rdoOriginalHead.UseVisualStyleBackColor = true;
             // 
@@ -226,13 +275,13 @@
             this.rdoBrankHead.Name = "rdoBrankHead";
             this.rdoBrankHead.Size = new System.Drawing.Size(56, 21);
             this.rdoBrankHead.TabIndex = 4;
-            this.rdoBrankHead.TabStop = true;
             this.rdoBrankHead.Text = "空白";
             this.rdoBrankHead.UseVisualStyleBackColor = true;
             // 
             // rdoDotHead
             // 
             this.rdoDotHead.AutoSize = true;
+            this.rdoDotHead.Checked = true;
             this.rdoDotHead.Location = new System.Drawing.Point(9, 23);
             this.rdoDotHead.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.rdoDotHead.Name = "rdoDotHead";
@@ -249,7 +298,6 @@
             this.rdoAstaHead.Name = "rdoAstaHead";
             this.rdoAstaHead.Size = new System.Drawing.Size(105, 21);
             this.rdoAstaHead.TabIndex = 3;
-            this.rdoAstaHead.TabStop = true;
             this.rdoAstaHead.Text = "＊(ｱｽﾀﾘｽｸ)";
             this.rdoAstaHead.UseVisualStyleBackColor = true;
             // 
@@ -351,8 +399,6 @@
             // chkNeedOnlyDisp
             // 
             this.chkNeedOnlyDisp.AutoSize = true;
-            this.chkNeedOnlyDisp.Checked = true;
-            this.chkNeedOnlyDisp.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNeedOnlyDisp.Location = new System.Drawing.Point(529, 513);
             this.chkNeedOnlyDisp.Name = "chkNeedOnlyDisp";
             this.chkNeedOnlyDisp.Size = new System.Drawing.Size(87, 21);
@@ -377,22 +423,22 @@
             this.btnSoat.Text = "絞り込み";
             this.btnSoat.UseVisualStyleBackColor = true;
             // 
-            // btnCSV
+            // btnExportSupply
             // 
-            this.btnCSV.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnCSV.Location = new System.Drawing.Point(579, 555);
-            this.btnCSV.Name = "btnCSV";
-            this.btnCSV.Size = new System.Drawing.Size(67, 58);
-            this.btnCSV.TabIndex = 20;
-            this.btnCSV.Text = "CSV出力";
-            this.btnCSV.UseVisualStyleBackColor = true;
+            this.btnExportSupply.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnExportSupply.Location = new System.Drawing.Point(579, 555);
+            this.btnExportSupply.Name = "btnExportSupply";
+            this.btnExportSupply.Size = new System.Drawing.Size(67, 58);
+            this.btnExportSupply.TabIndex = 20;
+            this.btnExportSupply.Text = "提供元\r\n抽出";
+            this.btnExportSupply.UseVisualStyleBackColor = true;
             // 
             // ShowAndCopy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 685);
-            this.Controls.Add(this.btnCSV);
+            this.Controls.Add(this.btnExportSupply);
             this.Controls.Add(this.btnSoat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chkNeedOnlyDisp);
@@ -452,6 +498,11 @@
         private System.Windows.Forms.CheckBox chkNeedOnlyDisp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSoat;
-        private System.Windows.Forms.Button btnCSV;
+        private System.Windows.Forms.Button btnExportSupply;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supply;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn disp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nikname;
     }
 }

@@ -30,82 +30,99 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(editsupply));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbname = new System.Windows.Forms.TextBox();
+            this.lblname = new System.Windows.Forms.Label();
+            this.btnInput = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name});
             this.dataGridView1.Location = new System.Drawing.Point(293, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(321, 146);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 25);
-            this.textBox1.TabIndex = 1;
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "素材提供元";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 300;
             // 
-            // label1
+            // tbname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "名称";
+            this.tbname.Location = new System.Drawing.Point(22, 43);
+            this.tbname.Name = "tbname";
+            this.tbname.Size = new System.Drawing.Size(246, 25);
+            this.tbname.TabIndex = 1;
             // 
-            // button1
+            // lblname
             // 
-            this.button1.Location = new System.Drawing.Point(22, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblname.AutoSize = true;
+            this.lblname.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblname.Location = new System.Drawing.Point(19, 23);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(38, 17);
+            this.lblname.TabIndex = 2;
+            this.lblname.Text = "名称";
             // 
-            // button2
+            // btnInput
             // 
-            this.button2.Location = new System.Drawing.Point(190, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 44);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "削除";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInput.Location = new System.Drawing.Point(22, 96);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(78, 44);
+            this.btnInput.TabIndex = 3;
+            this.btnInput.Text = "登録";
+            this.btnInput.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btndelete
             // 
-            this.button3.Location = new System.Drawing.Point(109, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 44);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "更新";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btndelete.Location = new System.Drawing.Point(190, 96);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(78, 44);
+            this.btndelete.TabIndex = 4;
+            this.btndelete.Text = "削除";
+            this.btndelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(109, 96);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 44);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "更新";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // editsupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 168);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnInput);
+            this.Controls.Add(this.lblname);
+            this.Controls.Add(this.tbname);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.Name = "editsupply";
             this.Text = "提供元編集";
+            this.Load += new System.EventHandler(this.editsupply_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,10 +132,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tbname;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Button btnInput;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }
