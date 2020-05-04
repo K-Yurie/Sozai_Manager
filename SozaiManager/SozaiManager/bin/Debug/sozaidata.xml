@@ -1,15 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sozaidatas>
-  <picture>
-    <data>
-      <supply>いらすとや</supply>
-      <name>ピースサインのイラスト</name>
-      <needDisplay>false</needDisplay>
-      <nikname>ピース</nikname>
-    </data>
-  </picture>
+  <picture />
   <BGM />
-  <SE />
+  <SE>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+    <data>
+      <supply>ニコニ・コモンズ</supply>
+      <name>猫を崇拝せよ</name>
+      <needDisplay>false</needDisplay>
+      <nikname>-</nikname>
+    </data>
+  </SE>
   <Movie />
   <Script />
   <Application />

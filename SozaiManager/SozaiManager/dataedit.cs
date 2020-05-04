@@ -16,6 +16,8 @@ namespace SozaiManager
         XDocument _dataDocu = XDocument.Load("sozaidata.xml");
         XDocument _supplyDocu = XDocument.Load("source.xml");
         DataTable _dispDT = new DataTable();
+        bool _removedFlg = false;
+        int changedCount = 0;
         string[] _beforeChangeType = new string[10];
         string[] _beforeChangeNames = new string[10];
         string[] _beforeChangeSupply = new string[10];
@@ -610,7 +612,9 @@ namespace SozaiManager
 
             btnUpdate.Click += (_sender, _e) =>
             {
-            
+                var doneId = new List<int>();
+                bool perfectFlg = true;
+
               for(int count = 0;count<10; count++)
               {
                     bool[] isInputs = new bool[5];
@@ -652,24 +656,255 @@ namespace SozaiManager
                         if (_beforeChangeType[count] == getNowValue("type", count))
                         {
                             NomalUpdate(count);
+                            doneId.Add(count);
                         }
                         else
                         {
                             TypeUpdate(count);
+                            doneId.Add(count);
                         }
                     }
-                    else 
-                    {
-                    //必須項目がブランクあり
-                    }
+                        if (isInputs[0] || isInputs[1] || isInputs[2] || isInputs[3] || getNowValue("need", count) == "true")
+                        {
+                            switch (count)
+                            {
+                                case 0:
+                                bool flg0= needCheck(cmbType1, cmbSupply1, tbname1);
+                                if (flg0)
+                                {
+                                    RowClear(0, cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
 
+                                case 1:
+                                bool flg1 = needCheck(cmbType2, cmbSupply2, tbname2);
+                                if (flg1)
+                                {
+                                    RowClear(1, cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+
+                                case 2:
+                                bool flg2 = needCheck(cmbType3, cmbSupply3, tbname3); 
+                                if (flg2)
+                                {
+                                    RowClear(2, cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+
+                                case 3:
+                                bool flg3 = needCheck(cmbType3, cmbSupply3, tbname3);
+                                if (flg3)
+                                {
+                                    RowClear(3, cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                break;
+
+                                case 4:
+                                bool flg4 = needCheck(cmbType5, cmbSupply5, tbname5);
+                                if (flg4)
+                                {
+                                    RowClear(4, cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+
+                                case 5:
+                                bool flg5 = needCheck(cmbType6, cmbSupply6, tbname6);
+                                if (flg5)
+                                {
+                                    RowClear(5, cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                } 
+                                    break;
+                                case 6:
+                                bool flg6 = needCheck(cmbType7, cmbSupply7, tbname7);
+                                if (flg6)
+                                {
+                                    RowClear(6, cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+                                case 7:
+                                bool flg7 = needCheck(cmbType8, cmbSupply8, tbname8);
+                                if (flg7)
+                                {
+                                    RowClear(7, cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+                                case 8:
+                                bool flg8 = needCheck(cmbType9, cmbSupply9, tbname9);
+                                if (flg8)
+                                {
+                                    RowClear(8, cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+                                case 9:
+                                bool flg9 = needCheck(cmbType10, cmbSupply10, tbname10);
+                                if (flg9)
+                                {
+                                    RowClear(9, cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+                                }
+                                else
+                                {
+                                    perfectFlg = false;
+                                }
+                                    break;
+                            }
+                        }
               }
-
+              if (perfectFlg) 
+                {
+                    MessageBox.Show(doneId.Count.ToString()+"件の更新が完了しました", "登録完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(doneId.Count.ToString() + "件の更新が完了しました", "登録完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("必須項目にぬけのあるデータがありました", "情報", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                fomatDT();
+                dataGridView1.DataSource = _dispDT;
             };
 
             btnDelete.Click += (_sender, _e) =>
             {
-            
+                var doneId = new List<int>();
+                bool perfectFlg = true;
+                var deletedId = new List<int>();
+
+                for (int count = 0; count < 10; count++)
+                {
+                    bool[] isInputs = new bool[4];
+                    if (getNowValue("type", count) == "")
+                    {
+                        isInputs[0] = false;
+                    }
+                    else
+                    {
+                        isInputs[0] = true;
+                    }
+                    if (getNowValue("supply", count) == "")
+                    {
+                        isInputs[1] = false;
+                    }
+                    else
+                    {
+                        isInputs[1] = true;
+                    }
+                    if (getNowValue("name", count) == "")
+                    {
+                        isInputs[2] = false;
+                    }
+                    else
+                    {
+                        isInputs[2] = true;
+                    }
+                    if (getNowValue("Nikname", count) == "")
+                    {
+                        isInputs[3] = false;
+                    }
+                    else
+                    {
+                        isInputs[3] = true;
+                    }
+
+                    if (isInputs[0] && isInputs[1] && isInputs[2])
+                    {
+                        DeleteOneData(count, false);
+                        if (_removedFlg) 
+                        {
+                            deletedId.Add(count); 
+                        }
+                        else if(isInputs[0] || isInputs[1] || isInputs[2] || isInputs[3] || getNowValue("need", count) == "true") 
+                        {
+                            perfectFlg = false;
+                        }
+                        _removedFlg = false;
+                    }
+                }
+
+                foreach(int removedItem in deletedId) 
+                {
+                    switch (removedItem) 
+                    {
+                        case 0:RowClear(0, cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                            break;
+
+                        case 1:
+                            RowClear(1, cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                            break;
+
+                        case 2:
+                            RowClear(2, cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                            break;
+                        case 3:
+                            RowClear(3, cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                            break;
+                        case 4:
+                            RowClear(4, cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                            break;
+                        case 5:
+                            RowClear(5, cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                            break;
+                        case 6:
+                            RowClear(6, cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                            break;
+                        case 7:
+                            RowClear(7, cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                            break;
+                        case 8:
+                            RowClear(8, cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                            break;
+                        case 9:
+                            RowClear(9, cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+                            break;
+                    }
+
+                }
+                if (perfectFlg)
+                {
+                    MessageBox.Show(deletedId.Count.ToString()+"件の削除が完了しました", "削除完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else 
+                {
+                    MessageBox.Show(deletedId.Count.ToString()+"件の削除が完了しました", "削除完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("削除データを発見できないデータがありました","情報",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+                fomatDT();
+                dataGridView1.DataSource = _dispDT;
             };
         }
 
@@ -755,7 +990,6 @@ namespace SozaiManager
                 }
             }
         }
-
 
         private void RowClear(int Listid,ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
         {
@@ -995,61 +1229,263 @@ namespace SozaiManager
 
                 case "スクリプト":xmlTypeName = "アプリ";
                           break;
-            }              
+            }
 
-            XElement typeNode = _dataDocu.Element(xmlTypeName);
+            XElement sozaidatas = _dataDocu.Element("sozaidatas");
+            XElement typeNode = sozaidatas.Element(xmlTypeName);
             IEnumerable<XElement> datas = typeNode.Elements("data");
 
+
+            bool oneChanged = false;
             foreach(XElement data in datas) 
             {
-
-                if (data.Element("name").Value == _beforeChangeNames[ListId]) 
+                if (!oneChanged)
                 {
-                    string nowvalue = "";
+                    if (data.Element("name").Value == _beforeChangeNames[ListId]
+                        && data.Element("supply").Value == _beforeChangeSupply[ListId]
+                        && data.Element("needDisplay").Value == _beforeChangeNeed[ListId]
+                        &&( data.Element("nikname").Value == _beforeChangeNikname[ListId]
+                        ||(data.Element("nikname").Value =="-" && _beforeChangeNikname[ListId]==""))
+                        )
 
-                    nowvalue = getNowValue("supply", ListId);
-                    if (data.Element("supply").Value != nowvalue)
                     {
-                        data.Element("supply").Value = nowvalue;
-                    }
+                        string nowvalue = "";
 
-                    nowvalue = getNowValue("name", ListId);
-                    if (data.Element("name").Value != nowvalue) 
-                    {
-                        data.Element("name").Value = nowvalue;
-                    }
-
-                    nowvalue = getNowValue("need", ListId);
-                    if (data.Element("needDisplay").Value != nowvalue) 
-                    {
-                        data.Element("needDisplay").Value = nowvalue;
-                    }
-
-                    nowvalue = getNowValue("Niknae", ListId);
-                    if (data.Element("nikname").Value != nowvalue) 
-                    {
-                        if (nowvalue == "") 
+                        nowvalue = getNowValue("supply", ListId);
+                        if (data.Element("supply").Value != nowvalue)
                         {
-                            data.Element("nikname").Value = "-";
+                            data.Element("supply").Value = nowvalue;
                         }
-                        else 
+
+                        nowvalue = getNowValue("name", ListId);
+                        if (data.Element("name").Value != nowvalue)
                         {
-                            data.Element("nikname").Value = nowvalue;
+                            data.Element("name").Value = nowvalue;
                         }
-                    
+
+                        nowvalue = getNowValue("need", ListId);
+                        if (data.Element("needDisplay").Value != nowvalue)
+                        {
+                            data.Element("needDisplay").Value = nowvalue;
+                        }
+
+                        nowvalue = getNowValue("Nikname", ListId);
+                        if (data.Element("nikname").Value != nowvalue)
+                        {
+                            if (nowvalue == "")
+                            {
+                                data.Element("nikname").Value = "-";
+                            }
+                            else
+                            {
+                                data.Element("nikname").Value = nowvalue;
+                            }
+
+                        }
+
+                        if (rdoOneChange.Checked) { oneChanged = true; }
+                        changedCount++;
                     }
                 }
                 _dataDocu.Save("sozaidata.xml");
-
-
             }
-
-        
         }
 
         private void TypeUpdate(int ListId) 
         {
-        
+            NomalUpdate(ListId);
+
+
+                string niknameString = getNowValue("Nikname", ListId);
+                if (niknameString == "") { niknameString = "-"; }
+
+                XElement typeChangeData = new XElement("data",
+                    new XElement("supply", getNowValue("supply", ListId)),
+                    new XElement("name", getNowValue("name", ListId)),
+                    new XElement("needDisplay", getNowValue("need", ListId)),
+                    new XElement("nikname", niknameString));
+
+            for (int redo = 0; redo < changedCount; redo++)
+            {
+                XElement sozaidatas = _dataDocu.Element("sozaidatas");
+                switch (getNowValue("type", ListId))
+                {
+                    case "画像":
+                        XElement picture = sozaidatas.Element("picture");
+                        picture.Add(typeChangeData);
+                        break;
+
+                    case "BGM":
+                        XElement BGM = sozaidatas.Element("BGM");
+                        BGM.Add(typeChangeData);
+                        break;
+
+                    case "SE":
+                        XElement SE = sozaidatas.Element("SE");
+                        SE.Add(typeChangeData);
+                        break;
+
+                    case "動画":
+                        XElement Movie = sozaidatas.Element("Movie");
+                        Movie.Add(typeChangeData);
+                        break;
+
+                    case "スクリプト":
+                        XElement Script = sozaidatas.Element("Script");
+                        Script.Add(typeChangeData);
+                        break;
+
+                    case "アプリ":
+                        XElement Application = sozaidatas.Element("Application");
+                        Application.Add(typeChangeData);
+                        break;
+                }
+            }
+            _dataDocu.Save("sozaidata.xml");
+
+            DeleteOneData(ListId, true);
+        }
+
+        private void DeleteOneData(int ListId,bool updateMode)
+        {
+            string xmlTypeName = "";
+            switch (_beforeChangeType[ListId])
+            {
+                case "画像":
+                    xmlTypeName = "picture";
+                    break;
+
+                case "BGM":
+                    xmlTypeName = "BGM";
+                    break;
+
+                case "SE":
+                    xmlTypeName = "SE";
+                    break;
+
+                case "動画":
+                    xmlTypeName = "Movie";
+                    break;
+
+                case "スクリプト":
+                    xmlTypeName = "Script";
+                    break;
+                case "アプリ":
+                    xmlTypeName = "Application";
+                    break;
+            }
+
+            XElement sozaidatas = _dataDocu.Element("sozaidatas");
+            XElement typeNode = sozaidatas.Element(xmlTypeName);
+            IEnumerable<XElement> datas = typeNode.Elements("data");
+            var targets = new List<XElement>();
+
+            bool oneDeleted = false;
+            if (updateMode)
+            {
+                if (rdoOneChange.Checked)
+                {
+                    foreach (XElement data in datas)
+                    {
+                        if (!oneDeleted)
+                        {
+                            if (data.Element("name").Value == _beforeChangeNames[ListId]
+                                && data.Element("supply").Value == _beforeChangeSupply[ListId]
+                                && data.Element("needDisplay").Value == _beforeChangeNeed[ListId]
+                                && (data.Element("nikname").Value == _beforeChangeNikname[ListId]
+                                || (data.Element("nikname").Value == "-" && _beforeChangeNikname[ListId] == "")))
+                            {
+                                data.Remove();
+                                if (rdoOneChange.Checked) { oneDeleted = true; }
+                            }
+
+                        }
+
+                    }
+                }
+                else 
+                {
+                    foreach (XElement data2 in datas)
+                    {
+                        if (!oneDeleted)
+                        {
+                            if (data2.Element("name").Value == _beforeChangeNames[ListId]
+                                && data2.Element("supply").Value == _beforeChangeSupply[ListId]
+                                && data2.Element("needDisplay").Value == _beforeChangeNeed[ListId]
+                                && (data2.Element("nikname").Value == _beforeChangeNikname[ListId]
+                                || (data2.Element("nikname").Value == "-" && _beforeChangeNikname[ListId] == "")))
+                            {
+                                targets.Add(data2);
+                                _removedFlg = true;
+                                //fomatDT();
+                                //sozaidatas = _dataDocu.Element("sozaidatas");
+                                //typeNode = sozaidatas.Element(xmlTypeName);
+                                //datas = typeNode.Elements("data");
+                                if (rdoOneChange.Checked) { oneDeleted = true; }
+                            }
+                        }
+                    }
+
+                    foreach (XElement target in targets)
+                    {
+                        target.Remove();
+                    }
+
+                }
+            }
+            else
+            {
+
+                if (rdoOneChange.Checked)
+                {
+                    foreach (XElement data in datas)
+                    {
+                        if (!oneDeleted)
+                        {
+                            if (data.Element("name").Value == getNowValue("name", ListId)
+                                && data.Element("supply").Value == getNowValue("supply", ListId)
+                                && data.Element("needDisplay").Value == getNowValue("need", ListId)
+                                && (data.Element("nikname").Value == getNowValue("Nikname", ListId)
+                                || (data.Element("nikname").Value == "-" && getNowValue("Nikname", ListId) == "")))
+                            {
+                                data.Remove();
+                                _removedFlg = true;
+                                if (rdoOneChange.Checked) { oneDeleted = true; }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (XElement data2 in datas)
+                    {
+                        if (!oneDeleted)
+                        {
+                            if (data2.Element("name").Value == getNowValue("name", ListId)
+                                && data2.Element("supply").Value == getNowValue("supply", ListId)
+                                && data2.Element("needDisplay").Value == getNowValue("need", ListId)
+                                && (data2.Element("nikname").Value == getNowValue("Nikname", ListId)
+                                || (data2.Element("nikname").Value == "-" && getNowValue("Nikname", ListId) == "")))
+                            {
+                                targets.Add(data2);
+                                _removedFlg = true;
+                                //fomatDT();
+                                //sozaidatas = _dataDocu.Element("sozaidatas");
+                                //typeNode = sozaidatas.Element(xmlTypeName);
+                                //datas = typeNode.Elements("data");
+                                if (rdoOneChange.Checked) { oneDeleted = true; }
+                            }
+                        }
+                    }
+
+                    foreach (XElement target in targets)
+                    {
+                        target.Remove();
+                    }
+                }
+            }
+            _dataDocu.Save("sozaidata.xml");
+
         }
 
         private string getNowValue(string control,int listId) 
@@ -1202,7 +1638,6 @@ namespace SozaiManager
 
             return answer;
         }
-
 
     }
 }

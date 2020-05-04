@@ -113,7 +113,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInput = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoAllChange = new System.Windows.Forms.RadioButton();
+            this.rdoOneChange = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -837,12 +841,46 @@
             this.btnInput.Text = "データ登録";
             this.btnInput.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdoOneChange);
+            this.groupBox1.Controls.Add(this.rdoAllChange);
+            this.groupBox1.Location = new System.Drawing.Point(34, 682);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(305, 60);
+            this.groupBox1.TabIndex = 82;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "同一データの更新";
+            // 
+            // rdoAllChange
+            // 
+            this.rdoAllChange.AutoSize = true;
+            this.rdoAllChange.Location = new System.Drawing.Point(27, 26);
+            this.rdoAllChange.Name = "rdoAllChange";
+            this.rdoAllChange.Size = new System.Drawing.Size(86, 21);
+            this.rdoAllChange.TabIndex = 0;
+            this.rdoAllChange.Text = "一括変更";
+            this.rdoAllChange.UseVisualStyleBackColor = true;
+            // 
+            // rdoOneChange
+            // 
+            this.rdoOneChange.AutoSize = true;
+            this.rdoOneChange.Checked = true;
+            this.rdoOneChange.Location = new System.Drawing.Point(153, 26);
+            this.rdoOneChange.Name = "rdoOneChange";
+            this.rdoOneChange.Size = new System.Drawing.Size(116, 21);
+            this.rdoOneChange.TabIndex = 1;
+            this.rdoOneChange.TabStop = true;
+            this.rdoOneChange.Text = "一件のみ変更";
+            this.rdoOneChange.UseVisualStyleBackColor = true;
+            // 
             // dataedit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1009, 754);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
@@ -929,6 +967,8 @@
             this.Text = "データ編集";
             this.Load += new System.EventHandler(this.dataedit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1020,5 +1060,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nikname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Display;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdoOneChange;
+        private System.Windows.Forms.RadioButton rdoAllChange;
     }
 }
