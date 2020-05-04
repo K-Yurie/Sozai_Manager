@@ -2,64 +2,14 @@
 <sozaidatas>
   <picture>
     <data>
-      <supply>ニコニ・コモンズ</supply>
-      <name>kari</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
-      <supply>ニコニ・コモンズ</supply>
-      <name>kaka</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
-      <supply>ニコニ・コモンズ</supply>
-      <name>riri</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
       <supply>いらすとや</supply>
-      <name>karrr</name>
+      <name>ピースサインのイラスト</name>
       <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
-      <supply>いらすとや</supply>
-      <name>aaaa</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
-      <supply>いらすとや</supply>
-      <name>gggg</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
+      <nikname>ピース</nikname>
     </data>
   </picture>
-  <BGM>
-    <data>
-      <supply>いらすとや</supply>
-      <name>ggggg</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-    <data>
-      <supply>魔王魂</supply>
-      <name>aaaa</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-  </BGM>
-  <SE>
-    <data>
-      <supply>音人On-Jin</supply>
-      <name>tin</name>
-      <needDisplay>false</needDisplay>
-      <nikname>-</nikname>
-    </data>
-  </SE>
+  <BGM />
+  <SE />
   <Movie />
   <Script />
   <Application />

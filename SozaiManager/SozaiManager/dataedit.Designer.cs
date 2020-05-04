@@ -204,6 +204,7 @@
             // 
             // cmbType1
             // 
+            this.cmbType1.BackColor = System.Drawing.SystemColors.Window;
             this.cmbType1.FormattingEnabled = true;
             this.cmbType1.Location = new System.Drawing.Point(61, 363);
             this.cmbType1.Name = "cmbType1";
@@ -840,6 +841,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1009, 754);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.btnDelete);

@@ -16,7 +16,11 @@ namespace SozaiManager
         XDocument _dataDocu = XDocument.Load("sozaidata.xml");
         XDocument _supplyDocu = XDocument.Load("source.xml");
         DataTable _dispDT = new DataTable();
+        string[] _beforeChangeType = new string[10];
         string[] _beforeChangeNames = new string[10];
+        string[] _beforeChangeSupply = new string[10];
+        string[] _beforeChangeNikname = new string[10];
+        string[] _beforeChangeNeed = new string[10];
 
         public dataedit()
         {
@@ -78,68 +82,82 @@ namespace SozaiManager
             #region クリア
             btn1clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                RowClear(0,cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
             };
 
             btn2clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                RowClear(1,cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
             };
 
             btn3clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                RowClear(2,cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
             };
 
             btn4clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                RowClear(3,cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
             };
 
             btn5clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                RowClear(4,cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
             };
 
             btn6clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                RowClear(5,cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
             };
 
             btn7clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                RowClear(6,cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
             };
 
             btn8clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                RowClear(7,cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
             };
 
             btn9clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                RowClear(8,cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
             };
 
             btn10clear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+                RowClear(9,cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
             };
 
             btnClear.Click += (_sender, _e) =>
             {
-                RowClear(cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
-                RowClear(cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
-                RowClear(cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
-                RowClear(cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
-                RowClear(cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
-                RowClear(cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
-                RowClear(cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
-                RowClear(cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
-                RowClear(cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
-                RowClear(cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
-                fomatDT();
-                dataGridView1.DataSource = _dispDT;
+                FormFomat();
+
+                //RowClear(cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                //RowClear(cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                //RowClear(cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                //RowClear(cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                //RowClear(cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                //RowClear(cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                //RowClear(cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                //RowClear(cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                //RowClear(cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                //RowClear(cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+
+                //cmbType1.BackColor = Color.White; cmbSupply1.BackColor = Color.White;tbname1.BackColor = Color.White;
+                //cmbType2.BackColor = Color.White; cmbSupply2.BackColor = Color.White; tbname2.BackColor = Color.White;
+                //cmbType3.BackColor = Color.White; cmbSupply3.BackColor = Color.White; tbname3.BackColor = Color.White;
+                //cmbType4.BackColor = Color.White; cmbSupply4.BackColor = Color.White; tbname4.BackColor = Color.White;
+                //cmbType5.BackColor = Color.White; cmbSupply5.BackColor = Color.White; tbname5.BackColor = Color.White;
+                //cmbType6.BackColor = Color.White; cmbSupply6.BackColor = Color.White; tbname6.BackColor = Color.White;
+                //cmbType7.BackColor = Color.White; cmbSupply7.BackColor = Color.White; tbname7.BackColor = Color.White;
+                //cmbType8.BackColor = Color.White; cmbSupply8.BackColor = Color.White; tbname8.BackColor = Color.White;
+                //cmbType9.BackColor = Color.White; cmbSupply9.BackColor = Color.White; tbname9.BackColor = Color.White;
+                //cmbType10.BackColor = Color.White; cmbSupply10.BackColor = Color.White; tbname10.BackColor = Color.White;
+
+                //fomatDT();
+                //dataGridView1.DataSource = _dispDT;
             };
 
             #endregion
@@ -147,7 +165,7 @@ namespace SozaiManager
             dataGridView1.CellDoubleClick += (_sender, _e) =>
             {
                 bool complateflg = false;
-                for (int rowNumber= 0; rowNumber<11; rowNumber++)
+                for (int rowNumber = 0; rowNumber < 11; rowNumber++)
                 {
                     string[] inputedStrings = null;
                     switch (rowNumber)
@@ -160,6 +178,17 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1, _e.RowIndex);
                                 _beforeChangeNames[0] = tbname1.Text;
+                                _beforeChangeType[0] = cmbType1.Text;
+                                _beforeChangeSupply[0] = cmbSupply1.Text; ;
+                                _beforeChangeNikname[0] = tbnikname1.Text;
+                                if (chkneed1.Checked) 
+                                {
+                                    _beforeChangeNeed[0] = "true";
+                                }
+                                else 
+                                {
+                                    _beforeChangeNeed[0] = "false";
+                                }
                                 complateflg = true;
                             }
                             break;
@@ -172,6 +201,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2, _e.RowIndex);
                                 _beforeChangeNames[2] = tbname2.Text;
+                                _beforeChangeType[1] = cmbType2.Text;
+                                _beforeChangeSupply[1] = cmbSupply2.Text; ;
+                                _beforeChangeNikname[1] = tbnikname2.Text;
+                                if (chkneed2.Checked)
+                                {
+                                    _beforeChangeNeed[1] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[1] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -184,7 +225,19 @@ namespace SozaiManager
                             if (margedText3 == "" && inputedStrings[4] == "false")
                             {
                                 sendFromGrid(cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3, _e.RowIndex);
-                                _beforeChangeNames[2]= tbname3.Text;
+                                _beforeChangeNames[2] = tbname3.Text;
+                                _beforeChangeType[2] = cmbType3.Text;
+                                _beforeChangeSupply[2] = cmbSupply3.Text; ;
+                                _beforeChangeNikname[2] = tbnikname3.Text;
+                                if (chkneed3.Checked)
+                                {
+                                    _beforeChangeNeed[2] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[2] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -198,6 +251,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4, _e.RowIndex);
                                 _beforeChangeNames[3] = tbname4.Text;
+                                _beforeChangeType[3] = cmbType4.Text;
+                                _beforeChangeSupply[3] = cmbSupply4.Text; ;
+                                _beforeChangeNikname[3] = tbnikname4.Text;
+                                if (chkneed4.Checked)
+                                {
+                                    _beforeChangeNeed[3] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[3] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -211,6 +276,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5, _e.RowIndex);
                                 _beforeChangeNames[4] = tbname5.Text;
+                                _beforeChangeType[4] = cmbType5.Text;
+                                _beforeChangeSupply[4] = cmbSupply5.Text; ;
+                                _beforeChangeNikname[4] = tbnikname5.Text;
+                                if (chkneed5.Checked)
+                                {
+                                    _beforeChangeNeed[4] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[4] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -224,6 +301,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6, _e.RowIndex);
                                 _beforeChangeNames[5] = tbname6.Text;
+                                _beforeChangeType[5] = cmbType6.Text;
+                                _beforeChangeSupply[5] = cmbSupply6.Text; ;
+                                _beforeChangeNikname[5] = tbnikname6.Text;
+                                if (chkneed6.Checked)
+                                {
+                                    _beforeChangeNeed[5] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[5] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -236,6 +325,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7, _e.RowIndex);
                                 _beforeChangeNames[6] = tbname7.Text;
+                                _beforeChangeType[6] = cmbType7.Text;
+                                _beforeChangeSupply[6] = cmbSupply7.Text; ;
+                                _beforeChangeNikname[6] = tbnikname7.Text;
+                                if (chkneed7.Checked)
+                                {
+                                    _beforeChangeNeed[6] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[6] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -249,6 +350,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8, _e.RowIndex);
                                 _beforeChangeNames[7] = tbname8.Text;
+                                _beforeChangeType[7] = cmbType8.Text;
+                                _beforeChangeSupply[7] = cmbSupply8.Text; ;
+                                _beforeChangeNikname[7] = tbnikname8.Text;
+                                if (chkneed8.Checked)
+                                {
+                                    _beforeChangeNeed[7] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[7] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -262,6 +375,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9, _e.RowIndex);
                                 _beforeChangeNames[8] = tbname9.Text;
+                                _beforeChangeType[8] = cmbType9.Text;
+                                _beforeChangeSupply[8] = cmbSupply9.Text; ;
+                                _beforeChangeNikname[8] = tbnikname9.Text;
+                                if (chkneed9.Checked)
+                                {
+                                    _beforeChangeNeed[8] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[8] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -275,6 +400,18 @@ namespace SozaiManager
                             {
                                 sendFromGrid(cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10, _e.RowIndex);
                                 _beforeChangeNames[9] = tbname10.Text;
+                                _beforeChangeType[9] = cmbType10.Text;
+                                _beforeChangeSupply[9] = cmbSupply10.Text; ;
+                                _beforeChangeNikname[9] = tbnikname10.Text;
+                                if (chkneed10.Checked)
+                                {
+                                    _beforeChangeNeed[9] = "true";
+                                }
+                                else
+                                {
+                                    _beforeChangeNeed[9] = "false";
+                                }
+
                                 complateflg = true;
                             }
                             break;
@@ -285,144 +422,787 @@ namespace SozaiManager
 
                 if (!complateflg) { MessageBox.Show("空の情報欄がありません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             };
-        }
 
-            private void fomatDT()
+            btnInput.Click += (_sender, _e) =>
             {
-                _dispDT = new DataTable();
-                _dispDT.Columns.Add("type");
-                _dispDT.Columns.Add("supply");
-                _dispDT.Columns.Add("name");
-                _dispDT.Columns.Add("needDisp");
-                _dispDT.Columns.Add("nikName");
-                XElement sozaidatas = _dataDocu.Element("sozaidatas");
-                XElement pic = sozaidatas.Element("picture");
-                IEnumerable<XElement> picdatas = pic.Elements("data");
-                AddRow("画像", picdatas);
-                XElement bgm = sozaidatas.Element("BGM");
-                IEnumerable<XElement> bgmDatas = bgm.Elements("data");
-                AddRow("BGM", bgmDatas);
-                XElement se = sozaidatas.Element("SE");
-                IEnumerable<XElement> seDatas = se.Elements("data");
-                AddRow("SE", seDatas);
-                XElement movie = sozaidatas.Element("Movie");
-                IEnumerable<XElement> movieDatas = movie.Elements("data");
-                AddRow("動画", movieDatas);
-                XElement script = sozaidatas.Element("Script");
-                IEnumerable<XElement> scriptDatas = script.Elements("data");
-                AddRow("スクリプト", scriptDatas);
-                XElement appli = sozaidatas.Element("Application");
-                IEnumerable<XElement> appliDatas = appli.Elements("data");
-                AddRow("アプリ", appliDatas);
-            }
-
-            private void AddRow(string type, IEnumerable<XElement> elements)
-            {
-                if (elements.Count() > 0)
+                bool missFlg = false;
+                int doneCount = 0;
+                var doneId = new List<int>();
+                if (cmbType1.Text != "" || cmbSupply1.Text != "" || tbname1.Text != "" || tbnikname1.Text != "" || chkneed1.Checked) 
                 {
-                    foreach (XElement ele in elements)
+                    if (needCheck(cmbType1, cmbSupply1, tbname1)) 
                     {
-                        DataRow eleRow = _dispDT.NewRow();
-                        eleRow["type"] = type;
-                        eleRow["supply"] = ele.Element("supply").Value;
-                        eleRow["name"] = ele.Element("name").Value;
-                        if (ele.Element("needDisplay").Value == "true")
+                        WriteDataXml(cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                        doneCount++;
+                        doneId.Add(1);
+                    }
+                    else 
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType2.Text != "" || cmbSupply2.Text != "" || tbname2.Text != "" || tbnikname2.Text != "" || chkneed2.Checked)
+                {
+                    if (needCheck(cmbType2, cmbSupply2, tbname2))
+                    {
+                        WriteDataXml(cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                        doneCount++;
+                        doneId.Add(2);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType3.Text != "" || cmbSupply3.Text != "" || tbname3.Text != "" || tbnikname3.Text != "" || chkneed3.Checked)
+                {
+                    if (needCheck(cmbType3, cmbSupply3, tbname3))
+                    {
+                        WriteDataXml(cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                        doneCount++;
+                        doneId.Add(3);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType4.Text != "" || cmbSupply4.Text != "" || tbname4.Text != "" || tbnikname4.Text != "" || chkneed4.Checked)
+                {
+                    if (needCheck(cmbType4, cmbSupply4, tbname4))
+                    {
+                        WriteDataXml(cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                        doneCount++;
+                        doneId.Add(4);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType5.Text != "" || cmbSupply5.Text != "" || tbname5.Text != "" || tbnikname5.Text != "" || chkneed5.Checked)
+                {
+                    if (needCheck(cmbType5, cmbSupply5, tbname5))
+                    {
+                        WriteDataXml(cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                        doneCount++;
+                        doneId.Add(5);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType6.Text != "" || cmbSupply6.Text != "" || tbname6.Text != "" || tbnikname6.Text != "" || chkneed6.Checked)
+                {
+                    if (needCheck(cmbType6, cmbSupply6, tbname6))
+                    {
+                        WriteDataXml(cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                        doneCount++;
+                        doneId.Add(6);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType7.Text != "" || cmbSupply7.Text != "" || tbname7.Text != "" || tbnikname7.Text != "" || chkneed7.Checked)
+                {
+                    if (needCheck(cmbType7, cmbSupply7, tbname7))
+                    {
+                        WriteDataXml(cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                        doneCount++;
+                        doneId.Add(7);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType8.Text != "" || cmbSupply8.Text != "" || tbname8.Text != "" || tbnikname8.Text != "" || chkneed8.Checked)
+                {
+                    if (needCheck(cmbType8, cmbSupply8, tbname8))
+                    {
+                        WriteDataXml(cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                        doneCount++;
+                        doneId.Add(8);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType9.Text != "" || cmbSupply9.Text != "" || tbname9.Text != "" || tbnikname9.Text != "" || chkneed9.Checked)
+                {
+                    if (needCheck(cmbType9, cmbSupply9, tbname9))
+                    {
+                        WriteDataXml(cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                        doneCount++;
+                        doneId.Add(9);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (cmbType10.Text != "" || cmbSupply10.Text != "" || tbname10.Text != "" || tbnikname10.Text != "" || chkneed10.Checked)
+                {
+                    if (needCheck(cmbType10, cmbSupply10, tbname10))
+                    {
+                        WriteDataXml(cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+                        doneCount++;
+                        doneId.Add(10);
+                    }
+                    else
+                    {
+                        missFlg = true;
+                    }
+                }
+
+                if (missFlg) 
+                {
+                    MessageBox.Show(doneCount.ToString() + "件のデータを登録しました", "登録完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("必須項目に記述漏れがありました", "情報", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else 
+                {
+                    MessageBox.Show(doneCount.ToString() + "件のデータを登録しました", "登録完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                foreach(int id in doneId) 
+                {
+                    switch (id) 
+                    {
+                        case 1: RowClear(0,cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+                               break;
+                        case 2: RowClear(1,cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+                               break;
+                        case 3:RowClear(2,cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+                               break;
+                        case 4:RowClear(3,cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+                               break;
+                        case 5:RowClear(4,cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+                               break;
+                        case 6:RowClear(5,cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+                               break;
+                        case 7: RowClear(6,cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+                               break;
+                        case 8:RowClear(7,cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+                               break;
+                        case 9:RowClear(8,cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+                               break;
+                        case 10:RowClear(9,cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+                               break;
+                    }
+                }
+                fomatDT();
+                dataGridView1.DataSource = _dispDT;
+            };
+
+            btnUpdate.Click += (_sender, _e) =>
+            {
+            
+              for(int count = 0;count<10; count++)
+              {
+                    bool[] isInputs = new bool[5];
+                    if (getNowValue("type", count) == "") 
+                    {
+                        isInputs[0] = false;
+                    }
+                    else 
+                    {
+                        isInputs[0] = true;
+                    }
+                    if (getNowValue("supply", count)=="") 
+                    {
+                        isInputs[1] = false;
+                    }
+                    else 
+                    {
+                        isInputs[1] = true;
+                    }
+                    if (getNowValue("name", count) == "") 
+                    {
+                        isInputs[2] = false;
+                    }
+                    else 
+                    {
+                        isInputs[2] = true;
+                    }
+                    if (getNowValue("Nikname", count) == "")
+                    {
+                        isInputs[3] = false;
+                    }
+                    else 
+                    {
+                        isInputs[3] = true;
+                    }
+
+                    if (isInputs[0] && isInputs[1] && isInputs[2])
+                    {
+                        if (_beforeChangeType[count] == getNowValue("type", count))
                         {
-                            eleRow["needDisp"] = "必須";
+                            NomalUpdate(count);
                         }
                         else
                         {
-                            eleRow["needDisp"] = "";
+                            TypeUpdate(count);
                         }
-                        eleRow["nikName"] = ele.Element("nikname").Value;
-
-                        _dispDT.Rows.Add(eleRow);
-
                     }
+                    else 
+                    {
+                    //必須項目がブランクあり
+                    }
+
+              }
+
+            };
+
+            btnDelete.Click += (_sender, _e) =>
+            {
+            
+            };
+        }
+
+        private void FormFomat() 
+        {
+            RowClear(0,cmbType1, cmbSupply1, tbname1, tbnikname1, chkneed1);
+            RowClear(1,cmbType2, cmbSupply2, tbname2, tbnikname2, chkneed2);
+            RowClear(2,cmbType3, cmbSupply3, tbname3, tbnikname3, chkneed3);
+            RowClear(3,cmbType4, cmbSupply4, tbname4, tbnikname4, chkneed4);
+            RowClear(4,cmbType5, cmbSupply5, tbname5, tbnikname5, chkneed5);
+            RowClear(5,cmbType6, cmbSupply6, tbname6, tbnikname6, chkneed6);
+            RowClear(6,cmbType7, cmbSupply7, tbname7, tbnikname7, chkneed7);
+            RowClear(7,cmbType8, cmbSupply8, tbname8, tbnikname8, chkneed8);
+            RowClear(8,cmbType9, cmbSupply9, tbname9, tbnikname9, chkneed9);
+            RowClear(9,cmbType10, cmbSupply10, tbname10, tbnikname10, chkneed10);
+
+            cmbType1.BackColor = Color.White; cmbSupply1.BackColor = Color.White; tbname1.BackColor = Color.White;
+            cmbType2.BackColor = Color.White; cmbSupply2.BackColor = Color.White; tbname2.BackColor = Color.White;
+            cmbType3.BackColor = Color.White; cmbSupply3.BackColor = Color.White; tbname3.BackColor = Color.White;
+            cmbType4.BackColor = Color.White; cmbSupply4.BackColor = Color.White; tbname4.BackColor = Color.White;
+            cmbType5.BackColor = Color.White; cmbSupply5.BackColor = Color.White; tbname5.BackColor = Color.White;
+            cmbType6.BackColor = Color.White; cmbSupply6.BackColor = Color.White; tbname6.BackColor = Color.White;
+            cmbType7.BackColor = Color.White; cmbSupply7.BackColor = Color.White; tbname7.BackColor = Color.White;
+            cmbType8.BackColor = Color.White; cmbSupply8.BackColor = Color.White; tbname8.BackColor = Color.White;
+            cmbType9.BackColor = Color.White; cmbSupply9.BackColor = Color.White; tbname9.BackColor = Color.White;
+            cmbType10.BackColor = Color.White; cmbSupply10.BackColor = Color.White; tbname10.BackColor = Color.White;
+
+            fomatDT();
+            dataGridView1.DataSource = _dispDT;
+        }
+
+        private void fomatDT()
+        {
+            _dispDT = new DataTable();
+            _dispDT.Columns.Add("type");
+            _dispDT.Columns.Add("supply");
+            _dispDT.Columns.Add("name");
+            _dispDT.Columns.Add("needDisp");
+            _dispDT.Columns.Add("nikName");
+            XElement sozaidatas = _dataDocu.Element("sozaidatas");
+            XElement pic = sozaidatas.Element("picture");
+            IEnumerable<XElement> picdatas = pic.Elements("data");
+            AddRow("画像", picdatas);
+            XElement bgm = sozaidatas.Element("BGM");
+            IEnumerable<XElement> bgmDatas = bgm.Elements("data");
+            AddRow("BGM", bgmDatas);
+            XElement se = sozaidatas.Element("SE");
+            IEnumerable<XElement> seDatas = se.Elements("data");
+            AddRow("SE", seDatas);
+            XElement movie = sozaidatas.Element("Movie");
+            IEnumerable<XElement> movieDatas = movie.Elements("data");
+            AddRow("動画", movieDatas);
+            XElement script = sozaidatas.Element("Script");
+            IEnumerable<XElement> scriptDatas = script.Elements("data");
+            AddRow("スクリプト", scriptDatas);
+            XElement appli = sozaidatas.Element("Application");
+            IEnumerable<XElement> appliDatas = appli.Elements("data");
+            AddRow("アプリ", appliDatas);
+        }
+
+        private void AddRow(string type, IEnumerable<XElement> elements)
+        {
+            if (elements.Count() > 0)
+            {
+                foreach (XElement ele in elements)
+                {
+                    DataRow eleRow = _dispDT.NewRow();
+                    eleRow["type"] = type;
+                    eleRow["supply"] = ele.Element("supply").Value;
+                    eleRow["name"] = ele.Element("name").Value;
+                    if (ele.Element("needDisplay").Value == "true")
+                    {
+                        eleRow["needDisp"] = "必須";
+                    }
+                    else
+                    {
+                        eleRow["needDisp"] = "";
+                    }
+                    eleRow["nikName"] = ele.Element("nikname").Value;
+
+                    _dispDT.Rows.Add(eleRow);
+
                 }
             }
+        }
 
 
-            private void RowClear(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
+        private void RowClear(int Listid,ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
+        {
+            type.Text = "";
+            supply.Text = "";
+            name.Text = "";
+            Nikname.Text = "";
+            need.Checked = false;
+            type.BackColor = Color.White;
+            supply.BackColor = Color.White;
+            name.BackColor = Color.White;
+            _beforeChangeNames[Listid] = "";
+            _beforeChangeType[Listid] = "";
+        }
+
+        private string[] catchRowValues(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
+        {
+            var Rowvalues = new string[5];
+            Rowvalues[0] = type.Text;
+            Rowvalues[1] = supply.Text;
+            Rowvalues[2] = name.Text;
+            Rowvalues[3] = Nikname.Text;
+
+            if (need.Checked)
             {
-                type.Text = "";
-                supply.Text = "";
-                name.Text = "";
+                Rowvalues[4] = "true";
+            }
+            else
+            {
+                Rowvalues[4] = "false";
+            }
+
+            return Rowvalues;
+        }
+
+        private void sendFromGrid(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need, int rowindex)
+        {
+            type.Text = dataGridView1["type", rowindex].Value.ToString();
+            supply.Text = dataGridView1["supply", rowindex].Value.ToString();
+            name.Text = dataGridView1["name", rowindex].Value.ToString();
+            if (dataGridView1["nikName", rowindex].Value.ToString() == "-")
+            {
                 Nikname.Text = "";
+            }
+            else
+            {
+                Nikname.Text = dataGridView1["nikName", rowindex].Value.ToString();
+            }
+            if (dataGridView1["Display", rowindex].Value.ToString() == "必須")
+            {
+                need.Checked = true;
+            }
+            else
+            {
                 need.Checked = false;
             }
+        }
 
+        private void SetTypeCombo(ComboBox combo)
+        {
+            combo.Items.Add("画像");
+            combo.Items.Add("BGM");
+            combo.Items.Add("SE");
+            combo.Items.Add("動画");
+            combo.Items.Add("スクリプト");
+            combo.Items.Add("アプリ");
+        }
 
-            private string[] catchRowValues(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
+        private void SetSupplyCombo(DataTable dt, ComboBox combo)
+        {
+            dt.Columns.Add("supplyname");
+
+            XElement supplyBody = _supplyDocu.Element("source");
+            IEnumerable<XElement> supplynames = supplyBody.Elements("supply");
+            foreach (XElement supply in supplynames)
             {
-                var Rowvalues = new string[5];
-                Rowvalues[0] = type.Text;
-                Rowvalues[1] = supply.Text;
-                Rowvalues[2] = name.Text;
-                Rowvalues[3] = Nikname.Text;
-                
-                if (need.Checked)
-                {
-                    Rowvalues[4] = "true";
-                }
-                else
-                {
-                    Rowvalues[4] = "false";
-                }
+                DataRow onesupply = dt.NewRow();
+                onesupply["supplyname"] = supply.Value;
+                dt.Rows.Add(onesupply);
+            }
+            foreach (DataRow dr in dt.Rows)
+            {
+                combo.Items.Add(dr["supplyname"].ToString());
+            }
+        }
+        private void WriteDataXml(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need)
+        {
+            string nodetype = "";
+            switch (type.Text)
+            {
+                case "画像":
+                    nodetype = "picture";
+                    break;
 
-                return Rowvalues;
+                case "BGM":
+                    nodetype = "BGM";
+                    break;
+
+                case "SE":
+                    nodetype = "SE";
+                    break;
+
+                case "動画":
+                    nodetype = "Movie";
+                    break;
+
+                case "スクリプト":
+                    nodetype = "Script";
+                    break;
+
+                case "アプリ":
+                    nodetype = "Application";
+                    break;
             }
 
-            private void sendFromGrid(ComboBox type, ComboBox supply, TextBox name, TextBox Nikname, CheckBox need, int rowindex)
+            XElement sozaidatas = _dataDocu.Element("sozaidatas");
+
+            int flg = 0;
+            if (need.Checked) { flg = 1; }
+            if (Nikname.Text != "") { flg = 2; }
+            if (need.Checked && Nikname.Text != "") { flg = 3; }
+
+            switch (flg)
             {
-                type.Text = dataGridView1["type", rowindex].Value.ToString();
-                supply.Text = dataGridView1["supply", rowindex].Value.ToString();
-                name.Text = dataGridView1["name", rowindex].Value.ToString();
-                if (dataGridView1["nikName", rowindex].Value.ToString() == "-")
-                {
-                    Nikname.Text = "";
-                }
-                else
-                {
-                    Nikname.Text = dataGridView1["nikName", rowindex].Value.ToString();
-                }
-                if (dataGridView1["Display", rowindex].Value.ToString() == "必須")
-                {
-                    need.Checked = true;
-                }
-                else
-                {
-                    need.Checked = false;
-                }
+                case 0:
+
+                    XElement inputTo0 = sozaidatas.Element(nodetype);
+                    XElement inputDatas0 = new XElement("data",
+                        new XElement("supply", supply.Text),
+                        new XElement("name", name.Text),
+                        new XElement("needDisplay", "false"),
+                        new XElement("nikname", "-"));
+
+                    inputTo0.Add(inputDatas0);
+                    _dataDocu.Save("sozaidata.xml");
+
+                    break;
+
+                case 1:
+                    XElement inputTo1 = sozaidatas.Element(nodetype);
+                    XElement inputDatas1 = new XElement("data",
+                        new XElement("supply", supply.Text),
+                        new XElement("name", name.Text),
+                        new XElement("needDisplay", "true"),
+                        new XElement("nikname", "-"));
+
+                    inputTo1.Add(inputDatas1);
+                    _dataDocu.Save("sozaidata.xml");
+
+                    break;
+
+                case 2:
+                    XElement inputTo2 = sozaidatas.Element(nodetype);
+                    XElement inputDatas2 = new XElement("data",
+                        new XElement("supply", supply.Text),
+                        new XElement("name", name.Text),
+                        new XElement("needDisplay", "false"),
+                        new XElement("nikname", Nikname.Text));
+
+                    inputTo2.Add(inputDatas2);
+                    _dataDocu.Save("sozaidata.xml");
+                    break;
+
+                case 3:
+                    XElement inputTo3 = sozaidatas.Element(nodetype);
+                    XElement inputDatas3 = new XElement("data",
+                        new XElement("supply", supply.Text),
+                        new XElement("name", name.Text),
+                        new XElement("needDisplay", "true"),
+                        new XElement("nikname", Nikname.Text));
+
+                    inputTo3.Add(inputDatas3);
+                    _dataDocu.Save("sozaidata.xml");
+                    break;
             }
 
-            private void SetTypeCombo(ComboBox combo)
+
+        }
+
+        private bool needCheck(ComboBox type, ComboBox supply, TextBox name) 
+        {
+            bool answer = false;
+            if (type.Text != "" && supply.Text != "" && name.Text != "")
             {
-                combo.Items.Add("画像");
-                combo.Items.Add("BGM");
-                combo.Items.Add("SE");
-                combo.Items.Add("動画");
-                combo.Items.Add("スクリプト");
-                combo.Items.Add("アプリ");
+                answer = true;
+                type.BackColor = Color.White;
+                supply.BackColor = Color.White;
+                name.BackColor=Color.White;
+            }
+            else 
+            {
+                if (type.Text == "")
+                {
+                    type.BackColor = Color.Orange;
+                }
+                else 
+                {
+                     type.BackColor = Color.White;
+
+                }
+                if (supply.Text == "") 
+                {
+                    supply.BackColor = Color.Orange;
+                }
+                else 
+                {
+                    supply.BackColor = Color.White;
+                }
+                if (name.Text == "") 
+                {
+                    name.BackColor = Color.Orange;
+                }
+                else 
+                {
+                　　name.BackColor=Color.White;
+                }
+            }
+            return answer;
+        }
+
+        private void NomalUpdate(int ListId)
+        {
+            string xmlTypeName = "";
+            switch (_beforeChangeType[ListId]) 
+            {
+                case "画像": xmlTypeName = "picture";
+                          break;
+
+                case "BGM":xmlTypeName = "BGM";
+                          break;
+
+                case "SE":xmlTypeName = "SE";
+                          break;
+
+                case "動画":xmlTypeName = "Movie";
+                          break;
+
+                case "スクリプト":xmlTypeName = "アプリ";
+                          break;
+            }              
+
+            XElement typeNode = _dataDocu.Element(xmlTypeName);
+            IEnumerable<XElement> datas = typeNode.Elements("data");
+
+            foreach(XElement data in datas) 
+            {
+
+                if (data.Element("name").Value == _beforeChangeNames[ListId]) 
+                {
+                    string nowvalue = "";
+
+                    nowvalue = getNowValue("supply", ListId);
+                    if (data.Element("supply").Value != nowvalue)
+                    {
+                        data.Element("supply").Value = nowvalue;
+                    }
+
+                    nowvalue = getNowValue("name", ListId);
+                    if (data.Element("name").Value != nowvalue) 
+                    {
+                        data.Element("name").Value = nowvalue;
+                    }
+
+                    nowvalue = getNowValue("need", ListId);
+                    if (data.Element("needDisplay").Value != nowvalue) 
+                    {
+                        data.Element("needDisplay").Value = nowvalue;
+                    }
+
+                    nowvalue = getNowValue("Niknae", ListId);
+                    if (data.Element("nikname").Value != nowvalue) 
+                    {
+                        if (nowvalue == "") 
+                        {
+                            data.Element("nikname").Value = "-";
+                        }
+                        else 
+                        {
+                            data.Element("nikname").Value = nowvalue;
+                        }
+                    
+                    }
+                }
+                _dataDocu.Save("sozaidata.xml");
+
+
             }
 
-            private void SetSupplyCombo(DataTable dt, ComboBox combo)
-            {
-                dt.Columns.Add("supplyname");
-
-                XElement supplyBody = _supplyDocu.Element("source");
-                IEnumerable<XElement> supplynames = supplyBody.Elements("supply");
-                foreach (XElement supply in supplynames)
-                {
-                    DataRow onesupply = dt.NewRow();
-                    onesupply["supplyname"] = supply.Value;
-                    dt.Rows.Add(onesupply);
-                }
-                foreach (DataRow dr in dt.Rows)
-                {
-                    combo.Items.Add(dr["supplyname"].ToString());
-                }
-            }
         
+        }
+
+        private void TypeUpdate(int ListId) 
+        {
+        
+        }
+
+        private string getNowValue(string control,int listId) 
+        {
+            string answer = "";
+            string[] nowStrings = new string[10];
+            switch (control) 
+            {
+                case "type":
+                    nowStrings[0] = cmbType1.Text;
+                    nowStrings[1] = cmbType2.Text;
+                    nowStrings[2] = cmbType3.Text;
+                    nowStrings[3] = cmbType4.Text;
+                    nowStrings[4] = cmbType5.Text;
+                    nowStrings[5] = cmbType6.Text;
+                    nowStrings[6] = cmbType7.Text;
+                    nowStrings[7] = cmbType8.Text;
+                    nowStrings[8] = cmbType9.Text;
+                    nowStrings[9] = cmbType10.Text;
+                    answer = nowStrings[listId];
+                    break;
+
+                case "supply":
+                    nowStrings[0] = cmbSupply1.Text;
+                    nowStrings[1] = cmbSupply2.Text;
+                    nowStrings[2] = cmbSupply3.Text;
+                    nowStrings[3] = cmbSupply4.Text;
+                    nowStrings[4] = cmbSupply5.Text;
+                    nowStrings[5] = cmbSupply6.Text;
+                    nowStrings[6] = cmbSupply7.Text;
+                    nowStrings[7] = cmbSupply8.Text;
+                    nowStrings[8] = cmbSupply9.Text;
+                    nowStrings[9] = cmbSupply10.Text;
+                    answer = nowStrings[listId];
+                    break;
+
+                case "name":
+                    nowStrings[0] = tbname1.Text;
+                    nowStrings[1] = tbname2.Text;
+                    nowStrings[2] = tbname3.Text;
+                    nowStrings[3] = tbname4.Text;
+                    nowStrings[4] = tbname5.Text;
+                    nowStrings[5] = tbname6.Text;
+                    nowStrings[6] = tbname7.Text;
+                    nowStrings[7] = tbname8.Text;
+                    nowStrings[8] = tbname9.Text;
+                    nowStrings[9] = tbname10.Text;
+                    answer = nowStrings[listId];
+                    break;
+
+                case "need":
+                    if (chkneed1.Checked)
+                    {
+                        nowStrings[0] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[0] = "false";
+                    }
+                    if (chkneed2.Checked)
+                    {
+                        nowStrings[1] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[1] = "false";
+                    }
+                    if (chkneed3.Checked)
+                    {
+                        nowStrings[2] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[2] = "false";
+                    }
+                    if (chkneed4.Checked)
+                    {
+                        nowStrings[3] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[3] = "false";
+                    }
+                    if (chkneed5.Checked)
+                    {
+                        nowStrings[4] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[4] = "false";
+                    }
+                    if (chkneed6.Checked)
+                    {
+                        nowStrings[5] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[5] = "false";
+                    }
+                    if (chkneed7.Checked)
+                    {
+                        nowStrings[6] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[6] = "false";
+                    }
+                    if (chkneed8.Checked)
+                    {
+                        nowStrings[7] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[7] = "false";
+                    }
+                    if (chkneed9.Checked)
+                    {
+                        nowStrings[8] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[8] = "false";
+                    }
+                    if (chkneed10.Checked)
+                    {
+                        nowStrings[9] = "true";
+                    }
+                    else
+                    {
+                        nowStrings[9] = "false";
+                    }
+                    answer = nowStrings[listId];
+                    break;
+   
+                case "Nikname":
+                    nowStrings[0] = tbnikname1.Text;
+                    nowStrings[1] = tbnikname2.Text;
+                    nowStrings[2] = tbnikname3.Text;
+                    nowStrings[3] = tbnikname4.Text;
+                    nowStrings[4] = tbnikname5.Text;
+                    nowStrings[5] = tbnikname6.Text;
+                    nowStrings[6] = tbnikname7.Text;
+                    nowStrings[7] = tbnikname8.Text;
+                    nowStrings[8] = tbnikname9.Text;
+                    nowStrings[9] = tbnikname10.Text;
+                    answer = nowStrings[listId];
+                    break;
+
+            }
+
+            return answer;
+        }
+
+
     }
 }
