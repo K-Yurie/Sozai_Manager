@@ -1,0 +1,12 @@
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Release\SozaiManager.exe.config
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Release\SozaiManager.exe
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\bin\Release\SozaiManager.pdb
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.csprojAssemblyReference.cache
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.dataedit.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.editsupply.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.Form1.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.Properties.Resources.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.ShowAndCopy.resources
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.csproj.GenerateResource.cache
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.exe
+C:\Users\Yurie\Documents\MyProjects\SozaiManager\SozaiManager\SozaiManager\obj\Release\SozaiManager.pdb

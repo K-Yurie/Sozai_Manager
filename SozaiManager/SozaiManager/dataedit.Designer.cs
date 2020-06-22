@@ -113,11 +113,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInput = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdoAllChange = new System.Windows.Forms.RadioButton();
-            this.rdoOneChange = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -209,6 +205,7 @@
             // cmbType1
             // 
             this.cmbType1.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType1.FormattingEnabled = true;
             this.cmbType1.Location = new System.Drawing.Point(61, 363);
             this.cmbType1.Name = "cmbType1";
@@ -308,6 +305,7 @@
             // 
             // cmbType2
             // 
+            this.cmbType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType2.FormattingEnabled = true;
             this.cmbType2.Location = new System.Drawing.Point(61, 394);
             this.cmbType2.Name = "cmbType2";
@@ -366,6 +364,7 @@
             // 
             // cmbType3
             // 
+            this.cmbType3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType3.FormattingEnabled = true;
             this.cmbType3.Location = new System.Drawing.Point(61, 425);
             this.cmbType3.Name = "cmbType3";
@@ -442,6 +441,7 @@
             // 
             // cmbType4
             // 
+            this.cmbType4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType4.FormattingEnabled = true;
             this.cmbType4.Location = new System.Drawing.Point(61, 456);
             this.cmbType4.Name = "cmbType4";
@@ -500,6 +500,7 @@
             // 
             // cmbType5
             // 
+            this.cmbType5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType5.FormattingEnabled = true;
             this.cmbType5.Location = new System.Drawing.Point(61, 487);
             this.cmbType5.Name = "cmbType5";
@@ -558,6 +559,7 @@
             // 
             // cmbType6
             // 
+            this.cmbType6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType6.FormattingEnabled = true;
             this.cmbType6.Location = new System.Drawing.Point(61, 518);
             this.cmbType6.Name = "cmbType6";
@@ -616,6 +618,7 @@
             // 
             // cmbType7
             // 
+            this.cmbType7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType7.FormattingEnabled = true;
             this.cmbType7.Location = new System.Drawing.Point(61, 549);
             this.cmbType7.Name = "cmbType7";
@@ -674,6 +677,7 @@
             // 
             // cmbType8
             // 
+            this.cmbType8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType8.FormattingEnabled = true;
             this.cmbType8.Location = new System.Drawing.Point(61, 580);
             this.cmbType8.Name = "cmbType8";
@@ -732,6 +736,7 @@
             // 
             // cmbType9
             // 
+            this.cmbType9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType9.FormattingEnabled = true;
             this.cmbType9.Location = new System.Drawing.Point(61, 611);
             this.cmbType9.Name = "cmbType9";
@@ -790,6 +795,7 @@
             // 
             // cmbType10
             // 
+            this.cmbType10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType10.FormattingEnabled = true;
             this.cmbType10.Location = new System.Drawing.Point(61, 642);
             this.cmbType10.Name = "cmbType10";
@@ -841,46 +847,12 @@
             this.btnInput.Text = "データ登録";
             this.btnInput.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdoOneChange);
-            this.groupBox1.Controls.Add(this.rdoAllChange);
-            this.groupBox1.Location = new System.Drawing.Point(34, 682);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 60);
-            this.groupBox1.TabIndex = 82;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "同一データの更新";
-            // 
-            // rdoAllChange
-            // 
-            this.rdoAllChange.AutoSize = true;
-            this.rdoAllChange.Location = new System.Drawing.Point(27, 26);
-            this.rdoAllChange.Name = "rdoAllChange";
-            this.rdoAllChange.Size = new System.Drawing.Size(86, 21);
-            this.rdoAllChange.TabIndex = 0;
-            this.rdoAllChange.Text = "一括変更";
-            this.rdoAllChange.UseVisualStyleBackColor = true;
-            // 
-            // rdoOneChange
-            // 
-            this.rdoOneChange.AutoSize = true;
-            this.rdoOneChange.Checked = true;
-            this.rdoOneChange.Location = new System.Drawing.Point(153, 26);
-            this.rdoOneChange.Name = "rdoOneChange";
-            this.rdoOneChange.Size = new System.Drawing.Size(116, 21);
-            this.rdoOneChange.TabIndex = 1;
-            this.rdoOneChange.TabStop = true;
-            this.rdoOneChange.Text = "一件のみ変更";
-            this.rdoOneChange.UseVisualStyleBackColor = true;
-            // 
             // dataedit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1009, 754);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
@@ -967,8 +939,6 @@
             this.Text = "データ編集";
             this.Load += new System.EventHandler(this.dataedit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1060,8 +1030,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nikname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Display;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdoOneChange;
-        private System.Windows.Forms.RadioButton rdoAllChange;
     }
 }

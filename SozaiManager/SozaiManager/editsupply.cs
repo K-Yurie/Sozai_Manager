@@ -23,66 +23,98 @@ namespace SozaiManager
 
         private void editsupply_Load(object sender, EventArgs e)
         {
-            tbname.Text = "";
-            Set_Lamda();
-            fomatDt();
+            try
+            {
+                tbname.Text = "";
+                Set_Lamda();
+                fomatDt();
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("申し訳ございません。エラーが発生しました");
+            }
         }
-
-
 
         private void Set_Lamda()
         {
             btnInput.Click += (_sender, _e) =>
             {
-                XElement supplyes = _supplyDocu.Element("source");
-                XElement inputsupply = new XElement("supply", tbname.Text);
-                supplyes.Add(inputsupply);
-                _supplyDocu.Save("source.xml");
-                fomatDt();
+                try
+                {
+                    XElement supplyes = _supplyDocu.Element("source");
+                    XElement inputsupply = new XElement("supply", tbname.Text);
+                    supplyes.Add(inputsupply);
+                    _supplyDocu.Save("source.xml");
+                    fomatDt();
+                }
+                catch(Exception ex) 
+                {
+                    MessageBox.Show("申し訳ございません。エラーが発生しました");
+                }
              };
 
             btnUpdate.Click += (_sender, _e) => 
             {
-                XElement supplyes = _supplyDocu.Element("source");
-                IEnumerable<XElement> supplyNames = supplyes.Elements("supply");
-                foreach(XElement sup in supplyNames) 
+                try
                 {
-                    if (sup.Value == _beforetext) 
+                    XElement supplyes = _supplyDocu.Element("source");
+                    IEnumerable<XElement> supplyNames = supplyes.Elements("supply");
+                    foreach (XElement sup in supplyNames)
                     {
-                        sup.Value = tbname.Text;
+                        if (sup.Value == _beforetext)
+                        {
+                            sup.Value = tbname.Text;
+                        }
                     }
+                    _supplyDocu.Save("source.xml");
+                    fomatDt();
+                    tbname.Text = "";
+                    _beforetext = "";
                 }
-                _supplyDocu.Save("source.xml");
-                fomatDt();
-                tbname.Text = "";
-                _beforetext = "";
+                catch(Exception ex) 
+                {
+                    MessageBox.Show("申し訳ございません。エラーが発生しました");
+                }
             };
 
             btndelete.Click += (_sender, _e) =>
             {
-                XElement supplyes = _supplyDocu.Element("source");
-                IEnumerable<XElement> supplyNames = supplyes.Elements("supply");
-                foreach (XElement sup in supplyNames)
+                try
                 {
-                    if (sup.Value == _beforetext)
+                    XElement supplyes = _supplyDocu.Element("source");
+                    IEnumerable<XElement> supplyNames = supplyes.Elements("supply");
+                    foreach (XElement sup in supplyNames)
                     {
-                        sup.Remove();
+                        if (sup.Value == _beforetext)
+                        {
+                            sup.Remove();
+                        }
                     }
+                    _supplyDocu.Save("source.xml");
+                    fomatDt();
+                    tbname.Text = "";
+                    _beforetext = "";
                 }
-                _supplyDocu.Save("source.xml");
-                fomatDt();
-                tbname.Text = "";
-                _beforetext = "";
+                catch(Exception ex) 
+                {
+                    MessageBox.Show("申し訳ございません。エラーが発生しました");
+                }
             };
 
             dataGridView1.CellDoubleClick += (_sender, _e) => 
             {
-                tbname.Text = dataGridView1["name", _e.RowIndex].Value.ToString();
-                _beforetext = tbname.Text;
+                try
+                {
+                    tbname.Text = dataGridView1["name", _e.RowIndex].Value.ToString();
+                    _beforetext = tbname.Text;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("申し訳ございません。エラーが発生しました");
+                }
             };
 
         }
-
         private void fomatDt()
         {
             DataTable DT = new DataTable();

@@ -40,18 +40,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.データの抽出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.提供元の追加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.データ整理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.素材データの全消去ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.提供元の追加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txNikname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbJanru
             // 
+            this.cmbJanru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJanru.FormattingEnabled = true;
             this.cmbJanru.Location = new System.Drawing.Point(14, 54);
             this.cmbJanru.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -147,30 +149,30 @@
             // データの抽出ToolStripMenuItem
             // 
             this.データの抽出ToolStripMenuItem.Name = "データの抽出ToolStripMenuItem";
-            this.データの抽出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.データの抽出ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.データの抽出ToolStripMenuItem.Text = "データの抽出";
             this.データの抽出ToolStripMenuItem.Click += new System.EventHandler(this.データの抽出ToolStripMenuItem_Click);
-            // 
-            // 提供元の追加ToolStripMenuItem
-            // 
-            this.提供元の追加ToolStripMenuItem.Name = "提供元の追加ToolStripMenuItem";
-            this.提供元の追加ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.提供元の追加ToolStripMenuItem.Text = "提供元編集";
-            this.提供元の追加ToolStripMenuItem.Click += new System.EventHandler(this.提供元の追加ToolStripMenuItem_Click);
             // 
             // データ整理ToolStripMenuItem
             // 
             this.データ整理ToolStripMenuItem.Name = "データ整理ToolStripMenuItem";
-            this.データ整理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.データ整理ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.データ整理ToolStripMenuItem.Text = "素材データ編集";
             this.データ整理ToolStripMenuItem.Click += new System.EventHandler(this.データ整理ToolStripMenuItem_Click);
             // 
             // 素材データの全消去ToolStripMenuItem
             // 
             this.素材データの全消去ToolStripMenuItem.Name = "素材データの全消去ToolStripMenuItem";
-            this.素材データの全消去ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.素材データの全消去ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.素材データの全消去ToolStripMenuItem.Text = "素材データの全消去";
             this.素材データの全消去ToolStripMenuItem.Click += new System.EventHandler(this.素材データの全消去ToolStripMenuItem_Click);
+            // 
+            // 提供元の追加ToolStripMenuItem
+            // 
+            this.提供元の追加ToolStripMenuItem.Name = "提供元の追加ToolStripMenuItem";
+            this.提供元の追加ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.提供元の追加ToolStripMenuItem.Text = "提供元編集";
+            this.提供元の追加ToolStripMenuItem.Click += new System.EventHandler(this.提供元の追加ToolStripMenuItem_Click);
             // 
             // checkBox1
             // 
@@ -207,11 +209,22 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "＊：必須項目";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(246, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 14);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "前回：";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 195);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txNikname);
             this.Controls.Add(this.label1);
@@ -227,6 +240,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
@@ -259,6 +273,7 @@
         private System.Windows.Forms.TextBox txNikname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem 素材データの全消去ToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }
 

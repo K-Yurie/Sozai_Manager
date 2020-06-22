@@ -135,7 +135,7 @@
             this.txDisplay.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.txDisplay.Multiline = true;
             this.txDisplay.Name = "txDisplay";
-            this.txDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txDisplay.Size = new System.Drawing.Size(687, 146);
             this.txDisplay.TabIndex = 1;
             // 
